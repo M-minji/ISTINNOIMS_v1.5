@@ -139,11 +139,11 @@ function addRow() {
 			<thead>
 		       <tr>
       				<th style="width:6%;">행삭제</th>
-       				<th>소속사명</th>
-       				<th>부서명</th>
-       				<th>담당자명*</th>
+       				<th>소속사</th>
+       				<th>부서</th>
+       				<th><span style="color: red">* </span>담당자명</th>
        				<th>연락처</th>
-       				<th>메일</th>
+       				<th>이메일</th>
        				<th>기타</th>
       			</tr>
        		</thead>

@@ -86,7 +86,7 @@ function cancel(){
     	     	</c:forEach>
     	     	<c:if test="${empty gubunCateList}">
 					<tr>
-						<td colspan="3">내역이 없습니다.</td>
+						<td colspan="3">조회 정보가 없습니다.</td>
 					</tr>
 				</c:if>
     	   	</tbody>

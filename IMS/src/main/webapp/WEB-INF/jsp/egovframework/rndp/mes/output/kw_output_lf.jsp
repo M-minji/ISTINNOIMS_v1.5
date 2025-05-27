@@ -36,7 +36,7 @@ $(document).ready(function(){
 	  $('gridjs-tr').css('overflow-y', 'hidden');  
 	  $('table[role="grid"].gridjs-table th:nth-child(1) button').hide();
 	  $('table[role="grid"].gridjs-table th:nth-child(1)').css('width', '80px'); //       <th >NO.</th>    
-	  $('table[role="grid"].gridjs-table th:nth-child(2)').css('width', '160px'); //       <th >사업명</th>    
+	  $('table[role="grid"].gridjs-table th:nth-child(2)').css('width', '100px'); //       <th >사업명</th>    
 	  $('table[role="grid"].gridjs-table td:nth-child(2)').each(function() {
 			 // nowrap을 적용하여 줄내림 방지, overflow는 숨기기
 			    $(this).css({
@@ -45,8 +45,8 @@ $(document).ready(function(){
 			        'text-overflow': 'ellipsis'  // 텍스트가 넘칠 경우 '...'로 표시
 			    });
 			});
-	  $('table[role="grid"].gridjs-table th:nth-child(3)').css('width', '180px'); //     <th >사업기간</th>   
-	  $('table[role="grid"].gridjs-table th:nth-child(4)').css("width", "160px"); //    <th >담당자</th>    
+	  $('table[role="grid"].gridjs-table th:nth-child(3)').css('width', '150px'); //     <th >사업기간</th>   
+	  $('table[role="grid"].gridjs-table th:nth-child(4)').css("width", "135px"); //    <th >담당자</th>    산출물
 	  $('table[role="grid"].gridjs-table td:nth-child(4)').each(function() {
 			 // nowrap을 적용하여 줄내림 방지, overflow는 숨기기
 			    $(this).css({
@@ -56,7 +56,7 @@ $(document).ready(function(){
 			        'text-overflow': 'ellipsis'  // 텍스트가 넘칠 경우 '...'로 표시
 			    });
 			});
-	  $('table[role="grid"].gridjs-table th:nth-child(5)').css("width", "140px"); //       <th >담당자연락처</th> >
+	  $('table[role="grid"].gridjs-table th:nth-child(5)').css("width", "100px"); //       <th >담당자연락처</th> >  보고서
 	  $('table[role="grid"].gridjs-table td:nth-child(5)').each(function() {
 			 // nowrap을 적용하여 줄내림 방지, overflow는 숨기기
 			    $(this).css({
@@ -66,7 +66,7 @@ $(document).ready(function(){
 			        'text-overflow': 'ellipsis'  // 텍스트가 넘칠 경우 '...'로 표시
 			    });
 			});
-	  $('table[role="grid"].gridjs-table th:nth-child(6)').css('width', '100px'); //       <th >담당자메일</th>  
+	  $('table[role="grid"].gridjs-table th:nth-child(6)').css('width', '80px'); //       <th >담당자메일</th>  담당자
 	  $('table[role="grid"].gridjs-table td:nth-child(6)').each(function() {
 			 // nowrap을 적용하여 줄내림 방지, overflow는 숨기기
 			    $(this).css({
@@ -75,13 +75,13 @@ $(document).ready(function(){
 			        'text-overflow': 'ellipsis'  // 텍스트가 넘칠 경우 '...'로 표시
 			    });
 			});
-	  $('table[role="grid"].gridjs-table th:nth-child(7)').css('width', '120px'); //       <th >주사업자</th>   
-	  $('table[role="grid"].gridjs-table th:nth-child(8)').css('width', '120px'); //       <th >사업PM</th>   
-	  $('table[role="grid"].gridjs-table th:nth-child(9)').css('width', '160px'); //       <th >PM연락처</th>  
-	  $('table[role="grid"].gridjs-table th:nth-child(10)').css('width', '100px'); //     <th >PM이메일</th>  
-	  $('table[role="grid"].gridjs-table th:nth-child(11)').css('width', '160px'); //      <th >진행상태</th>   
-	  $('table[role="grid"].gridjs-table th:nth-child(12)').css('width', '160px'); //      <th >산출물</th>    
-	  $('table[role="grid"].gridjs-table th:nth-child(13)').css('width', '160px'); //       <th >보고서</th>    
+	  $('table[role="grid"].gridjs-table th:nth-child(7)').css('width', '100px'); //       <th >주사업자</th>   담연
+	  $('table[role="grid"].gridjs-table th:nth-child(8)').css('width', '100px'); //       <th >사업PM</th>   담메
+	  $('table[role="grid"].gridjs-table th:nth-child(9)').css('width', '100px'); //       <th >PM연락처</th>  주사
+	  $('table[role="grid"].gridjs-table th:nth-child(10)').css('width', '80px'); //     <th >PM이메일</th>  사p
+	  $('table[role="grid"].gridjs-table th:nth-child(11)').css('width', '100px'); //      <th >진행상태</th>   p연
+	  $('table[role="grid"].gridjs-table th:nth-child(12)').css('width', '100px'); //      <th >산출물</th>     pm이메일?
+	  $('table[role="grid"].gridjs-table th:nth-child(13)').css('width', '80px'); //       <th >보고서</th>    진행상태
 	tdBlock(3);                                                                           
 	tdBlock(4);      
 	

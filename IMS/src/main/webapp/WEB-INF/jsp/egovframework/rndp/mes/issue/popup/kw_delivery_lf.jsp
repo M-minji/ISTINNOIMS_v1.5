@@ -109,7 +109,7 @@ function fn_guestList(pageNo) {
 					</c:forEach>
 					<c:if test="${empty deliveryList}">
 						<tr>
-							<td colspan="5">내역이 없습니다.</td>
+							<td colspan="5">조회 정보가 없습니다.</td>
 						</tr>
 					</c:if>
 		        </tbody>

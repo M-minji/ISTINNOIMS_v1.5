@@ -243,7 +243,7 @@ function samePassword(){
 							</select></td>
 						</tr> --%>
 						<tr>
-							<th scope="row">직급*</th>
+							<th scope="row"><span style="color: red">* </span>직급</th>
 							<td><select name="kClassKey">
 									<option value="" selected>직급선택</option>
 									<c:forEach var="item" items="${classList}">
@@ -254,7 +254,7 @@ function samePassword(){
 							</select></td>
 						</tr>
 						<tr>
-							<th scope="row">부서*</th>
+							<th scope="row"><span style="color: red">* </span>부서</th>
 							<td>
 								<select name="kPositionKey" >
 									<option value="" selected>부서선택</option>
@@ -267,7 +267,7 @@ function samePassword(){
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">아이디*</th>
+							<th scope="row"><span style="color: red">* </span>아이디</th>
 							<td>
 								<p>
 									<input type="text" id="mesUserId" name="mesUserId" maxLength="20" onkeydown="againChecmesUserId()"  style="width:200px" />
@@ -276,13 +276,13 @@ function samePassword(){
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">이름*</th>
+							<th scope="row"><span style="color: red">* </span>이름</th>
 							<td>
 								<input type="text" name="mesUserName" maxLength="50"  style="width:200px" />
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">비밀번호*</th>
+							<th scope="row"><span style="color: red">* </span>비밀번호</th>
 							<td>
 	<!-- 							<input type="password" name="mesUserPassword1" maxLength="20" /> -->
 								<input type="password" id="mesUserPassword1" name="mesUserPassword1" maxLength="20" onblur="passwordResultCheck();" class="mr5" style="width:200px; vertical-align:middle" />
@@ -290,7 +290,7 @@ function samePassword(){
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">비밀번호 확인*</th>
+							<th scope="row"><span style="color: red">* </span>비밀번호 확인</th>
 							<td>
 								<input type="password" id="mesUserPassword2" name="mesUserPassword2" maxLength="20" onblur="samePassword();" style="width:200px"  />
 								<span id="passwordCheck"></span>

@@ -44,6 +44,14 @@ $(document).ready(function() {
 	$('table[role="grid"].gridjs-table th:nth-child(1)').css('width', '80px');
 	$('table[role="grid"].gridjs-table th:nth-child(1) button').hide();
 });
+new gridjs.Grid({
+	  columns: ['No.', '구분', '구분명', '영문표기(약어)'],
+	  data: [], // 빈 데이터
+	  language: {
+	    noRecordsFound: '조회 정보가 없습니다.'
+	  }
+	}).render(document.getElementById("myTable"));
+
 </script>
 <style>
 td.gridjs-td{padding:.7rem;}
@@ -82,7 +90,7 @@ td.gridjs-td{padding:.7rem;}
 	</div>
 	
 	<div class="data_table">
-   		<table id="myTable"  style="height:500px; overflow:auto;">
+   		<table id="myTable"  style="height:500px; overflow:auto; ">
     	   	<thead>
 				<tr>
 		           	<th style="width: 80px !important;">No.</th>
@@ -109,11 +117,6 @@ td.gridjs-td{padding:.7rem;}
            				</td>
          			</tr>
          		</c:forEach>
-         		<c:if test="${empty gubunList}">
-					<tr>
-						<td colspan="4" class="tac">내역이 없습니다.</td>
-					</tr>
-				</c:if>
        		</tbody>
 		</table>
 	</div>

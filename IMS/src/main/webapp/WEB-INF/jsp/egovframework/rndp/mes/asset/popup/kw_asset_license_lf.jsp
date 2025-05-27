@@ -208,7 +208,7 @@ function fn_search_detail(){
 						</c:forEach>
 						<c:if test="${empty assetList}">
 							<tr>
-								<td colspan="20">내역이 없습니다.</td>
+								<td colspan="20">조회 정보가 없습니다.</td>
 							</tr>
 						</c:if>
 			        </tbody>

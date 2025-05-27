@@ -27,6 +27,9 @@ viewService.prototype.go_view = function(obj) {
 	document.frm.submit();
 }
 $(document).ready(function() {
+	setTimeout(() => {
+	    document.activeElement.blur(); // 현재 포커스된 요소 포커스 해제
+	  }, 100);
 	$('table[role="grid"].gridjs-table th:nth-child(1) button').hide();
 	$('table[role="grid"].gridjs-table th:nth-child(1)').css('width', '80px');
 	$('table[role="grid"].gridjs-table th:nth-child(2)').css('width', '150px');
@@ -47,7 +50,7 @@ td.gridjs-td{padding:.7rem;}
 	
 	<div class="content_top">
 		<div class="content_tit">
-			<h2>담당자 정보관리 </h2>
+			<h2>담당자 정보 관리 </h2>
 		</div>
 		<div class="filter_wrap"> 
 			<div class="search_filter">
@@ -69,11 +72,11 @@ td.gridjs-td{padding:.7rem;}
     	   	<thead>
 				<tr>
 		           	<th style="width: 10%;">No.</th>
-		           	<th>소속사명</th>
-		           	<th>부서명</th>
+		           	<th>소속사</th>
+		           	<th>부서</th>
 		           	<th>담당자명</th>
 					<th>연락처</th>
-					<th>메일</th>
+					<th>이메일</th>
 					<th>기타</th>
 				</tr>
     	   	</thead>

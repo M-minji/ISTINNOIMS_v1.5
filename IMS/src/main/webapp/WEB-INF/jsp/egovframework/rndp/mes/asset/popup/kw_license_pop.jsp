@@ -317,7 +317,7 @@ function selectRow(key) {
 						</c:forEach>
 						<c:if test="${empty assetList}">
 							<tr>
-								<td colspan="20" class="tac">내역이 없습니다.</td>
+								<td colspan="20" class="tac">조회 정보가 없습니다.</td>
 							</tr>
 						</c:if>
 			        </tbody>

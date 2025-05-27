@@ -258,7 +258,7 @@ function rowCheck(index){
 					</c:forEach>
 					<c:if test="${empty maintanceList}">
 						<tr>
-							<td colspan="7">내역이 없습니다.</td>
+							<td colspan="7">조회 정보가 없습니다.</td>
 						</tr>
 					</c:if>
 		        </tbody>

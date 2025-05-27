@@ -351,7 +351,7 @@
 				</c:forEach>
 				<c:if test="${empty files}">
 					<tr>
-						<td colspan="2">내역이 없습니다.</td>
+						<td colspan="2">조회 정보가 없습니다.</td>
 					</tr>
 				</c:if>
 			</tbody>

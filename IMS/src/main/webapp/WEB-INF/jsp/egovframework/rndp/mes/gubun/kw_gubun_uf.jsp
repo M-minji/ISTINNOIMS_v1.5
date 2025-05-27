@@ -63,8 +63,8 @@ function cancel(){
         <table>
 	       	<thead>
 	       		<tr>
-	           		<th style="width: 200px">구분</th>
-	           		<th>구분명</th>
+	           		<th style="width: 200px"><span style="color: red">* </span>구분</th>
+	           		<th><span style="color: red">* </span>구분명</th>
 	           		<th>영문표기(약어)</th>
 	       		</tr>
 	       	</thead>
