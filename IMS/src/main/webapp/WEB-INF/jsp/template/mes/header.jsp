@@ -471,7 +471,7 @@ function setReturnTextPop(obj){
 body, ul, li { margin:0; padding:0;list-style:none;}
 body {word-break:keep-all;}
 a {text-decoration:none; color:inherit;}
-html {overflow-x:hidden; line-height:1.15;}
+html {overflow-x:auto; line-height:1.15;}
 .con { max-width:1400px;margin:0 auto;}
 .row::after {content:"";display:block;clear:both;}
 .cell { float:left; box-sizing:border-box;}
@@ -484,7 +484,7 @@ html {overflow-x:hidden; line-height:1.15;}
 .img-box > img { width:100%;display:block;}
 .gnb_sub { display: none;}
 .menu_item.active {font-weight: 600;}
-.circle2 {width: 1px; height: 1px; border: 2px solid #ccc;border-radius: 50%; margin-right: 10px;}  
+.circle2 {width: 1px; height: 1px; border: 2px solid #ccc;border-radius: 50%; margin-right: 10px;}
 </style>
     
 <c:if test="${menu.key eq 0}">

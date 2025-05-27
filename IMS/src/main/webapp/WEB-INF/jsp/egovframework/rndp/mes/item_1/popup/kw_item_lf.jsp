@@ -103,7 +103,7 @@ function selectItem(idx){
 					</c:forEach>
 					<c:if test="${empty itemList}">
 						<tr>
-							<td colspan="4">내역이 없습니다.</td>
+							<td colspan="4">조회 정보가 없습니다.</td>
 						</tr>
 					</c:if>
 				</tbody>

@@ -463,7 +463,7 @@
 		}
 	  
 		
-		function eInspectionResult(){
+		function eInspectionResult_go(){
 			var eAssetKeyArr = document.getElementsByName("eAssetKey").length;
 			if(eAssetKeyArr == 0){
 				alert("장비를 추가하여 정보를 입력하세요.");
@@ -673,7 +673,7 @@
 	</div>
 	
 	<div class="bottom_btn">
-		<button type="button" class="form_btn active" onclick="eInspectionResult();">점검결과 저장</button>
+		<button type="button" class="form_btn active" onclick="eInspectionResult_go();">점검결과 저장</button>
 		<c:if test="${staffVO.kStaffAuthWriteFlag eq 'T' }">
 			<!--  <button type="button" class="form_btn bg" onclick="eModification();">수정</button>  -->
 		</c:if>

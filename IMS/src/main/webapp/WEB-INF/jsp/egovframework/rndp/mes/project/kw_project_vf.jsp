@@ -313,7 +313,7 @@ function settingSign(){
 			<table>
 				<tbody>
   				<tr>
-	  				<th>사업명*</th>
+	  				<th>사업명</th>
 					<td>${projectInfo.eProjectName}
 						<input type="hidden" id="eProjectName" name="eProjectName" style="width:90%; text-align: left;padding-left: 5px;"  value="" maxlength="50"/>
 					</td>
@@ -328,7 +328,7 @@ function settingSign(){
 					</td>
 				</tr>
 				<tr>
-					<th>담당자명*</th>
+					<th>담당자명</th>
 					<td>${projectInfo.eManager}
 						<input type="hidden" id="eManager" name="eManager" style="width:90%; text-align: left;padding-left: 5px;"  maxlength="30"  value=""  />
 					</td>
@@ -390,7 +390,7 @@ function settingSign(){
 					<table>
 						<thead>
 							<tr>
-								<th style="width: 10%;">산출물명*</th>
+								<th style="width: 10%;">산출물명</th>
 								<th style="width: 10%;">등록일자</th>
 								<th style="width: 12%;">소속</th> 
 								<th style="width: 12%;">작성자</th> 
@@ -463,7 +463,7 @@ function settingSign(){
 						<table>
 								<thead>
 								<tr>
-									<th style="width: 10%;">산출물명*</th>
+									<th style="width: 10%;">산출물명</th>
 									<th style="width: 10%;">등록일자</th>
 									<th style="width: 12%;">소속</th> 
 									<th style="width: 12%;">작성자</th> 
@@ -533,7 +533,7 @@ function settingSign(){
 						<table>
 								<thead>
 								<tr>
-									<th style="width: 10%;">산출물명*</th>
+									<th style="width: 10%;">산출물명</th>
 									<th style="width: 10%;">등록일자</th>
 									<th style="width: 12%;">소속</th> 
 									<th style="width: 12%;">작성자</th> 
@@ -625,7 +625,7 @@ function settingSign(){
 						<table>
 							<thead>
 								<tr>
-									<th style="width: 10%;">산출물명*</th>
+									<th style="width: 10%;">산출물명</th>
 									<th style="width: 10%;">등록일자</th>
 									<th style="width: 12%;">소속</th> 
 									<th style="width: 12%;">작성자</th> 
@@ -696,7 +696,7 @@ function settingSign(){
 						<table>
 								<thead>
 								<tr>
-									<th style="width: 10%;">산출물명*</th>
+									<th style="width: 10%;">산출물명</th>
 									<th style="width: 10%;">등록일자</th>
 									<th style="width: 12%;">소속</th> 
 									<th style="width: 12%;">작성자</th> 
@@ -766,7 +766,7 @@ function settingSign(){
 						<table>
 								<thead>
 								<tr>
-									<th style="width: 10%;">산출물명*</th>
+									<th style="width: 10%;">산출물명</th>
 									<th style="width: 10%;">등록일자</th>
 									<th style="width: 12%;">소속</th> 
 									<th style="width: 12%;">작성자</th> 
@@ -837,7 +837,7 @@ function settingSign(){
 						<table>
 								<thead>
 								<tr>
-									<th style="width: 10%;">산출물명*</th>
+									<th style="width: 10%;">산출물명</th>
 									<th style="width: 10%;">등록일자</th>
 									<th style="width: 12%;">소속</th> 
 									<th style="width: 12%;">작성자</th> 

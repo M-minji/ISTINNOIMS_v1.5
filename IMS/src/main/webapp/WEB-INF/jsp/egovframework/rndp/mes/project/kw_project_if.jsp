@@ -261,13 +261,13 @@ function approvalPop(){
 		<table>
 			<tbody>
           		<tr>
-            		<th>작성자*</th>
+            		<th>작성자</th>
             		<td>${staffVo.kStaffName}
 						<input type="hidden" name="eAuthor" id="eAuthor" style="width:35%; text-align:left;"   value="${staffVo.kStaffName}" class="inp_color"/>
             		</td>
-            		<th>등록일*</th>
+            		<th>등록일</th>
             		<td>
-						<input type="text" id="pWdate" name="pWdate" style="width:150px; text-align:center;" class="inp_color" readonly />
+						<input type="text" id="pWdate" name="pWdate" style="width:150px; text-align:center;" class="inp_color" readonly="readonly" />
             		</td>
           		</tr>			
 			</tbody>
@@ -277,7 +277,7 @@ function approvalPop(){
 			<table>
 				<tbody>
   				<tr>
-	  				<th>사업명*</th>
+	  				<th><span style="color: red">* </span>사업명</th>
 					<td>
 						<input type="text" id="eProjectName" name="eProjectName" style="width:90%; text-align: left;padding-left: 5px;"  value="" maxlength="30"/>
 					</td>
@@ -292,7 +292,7 @@ function approvalPop(){
 					</td>
 				</tr>
 				<tr>
-					<th>담당자명*</th>
+					<th><span style="color: red">* </span>담당자명</th>
 					<td>
 						<input type="text" id="eManager" name="eManager" style="width:90%; text-align: left;padding-left: 5px;"  maxlength="30"  value=""  />
 					</td>

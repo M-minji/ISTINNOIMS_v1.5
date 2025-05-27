@@ -119,7 +119,7 @@ function decodeHtmlEntities(str) {
 	
 		<div class="content_top">
 			<div class="content_tit">
-				<h2>기업정보관리</h2>
+				<h2>기업 정보관리</h2>
 			</div>
 		</div>
 		
@@ -127,35 +127,35 @@ function decodeHtmlEntities(str) {
 			<table>
 				<tbody>
 					<tr>
-						<th>회사명 *</th>
+						<th><span style="color: red">* </span>회사명</th>
 						<td>
 							<input type="hidden" name="envName" value="companyName" maxlength="20"/> 
 							<input type="text" id="companyName" name="envVal" value="${companyName}" size="50" >
 						</td>
 					</tr>
 					<tr>
-						<th>대표자 *</th>
+						<th><span style="color: red">* </span>대표자</th>
 						<td>
 							<input type="hidden" name="envName" value="companyCeo"  maxlength="20"/> 
 							<input type="text" id="companyCeo" name="envVal" value="${companyCeo}" size="50" >
 						</td>
 					</tr>
 					<tr>
-						<th>설립일 *</th>
+						<th><span style="color: red">* </span>설립일</th>
 						<td>
 							<input type="hidden" name="envName" value="companyIncorpo"  maxlength="20"/>
 							<input type="text" id="companyIncorpo" name="envVal" value="${companyIncorpo}" size="50" >
 						</td>
 					</tr>
 					<tr>
-						<th>소재지 *</th>
+						<th><span style="color: red">* </span>소재지</th>
 						<td>
 							<input type="hidden" name="envName" value="companyAddr"  maxlength="120"/> 
 							<input type="text" id="companyAddr" name="envVal" value="${companyAddr}" size="50">
 						</td>
 					</tr>
 					<tr>
-						<th >대표전화 *</th>
+						<th ><span style="color: red">* </span>대표전화</th>
 						<td>
 							<input type="hidden" name="envName" value="companyTel"  maxlength="20"/> 
 							<input type="text" id="companyTel" name="envVal" value="${companyTel}" size="50">
@@ -169,7 +169,7 @@ function decodeHtmlEntities(str) {
 						</td>
 					</tr>
 					<tr>
-						<th>사업자번호 *</th>
+						<th><span style="color: red">* </span>사업자번호</th>
 						<td>
 							<input type="hidden" name="envName" value="companyNum"  maxlength="20"/> 
 							<input type="text" id="companyNum" name="envVal" value="${companyNum}" size="50" >
@@ -194,7 +194,7 @@ function decodeHtmlEntities(str) {
 						<td>
 							<input type="hidden" name="envName" value="sDomain"  maxlength="30"/>
 							<input type="text" id="sComCategory" name="envVal" value="${sDomain}" size="50" >
-							<span class="info_txt">※사용하는 도메인이 있을 경우 기입 예시)  naver.com, google.com</span>
+							<span class="info_txt">※사용하는 도메인이 있을 경우 기입,  예시) naver.com, google.com</span>
 						</td>
 					</tr>
 					<tr>
@@ -202,7 +202,7 @@ function decodeHtmlEntities(str) {
 						<td>
 							<input type="hidden" name="envName" value="sPublicIp" maxlength="30"/>
 							<input type="text" id="sComCategory" name="envVal" value="${sPublicIp}" size="50">
-							<span class="info_txt">※포트포워딩 및  VPN등 별도 정보 경우 기입(시스템 접속 포트 포함) </span>
+							<span class="info_txt">※포트포워딩 및  VPN 등 별도 정보 경우 기입 (시스템 접속 포트 포함) </span>
 						</td>
 					</tr>
 <!--						<tr>	-->

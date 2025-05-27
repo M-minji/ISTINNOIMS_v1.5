@@ -259,7 +259,7 @@ function deleteGyeoljaeList(){
 			<table>
 				<tbody>
 	 				<tr>
-	  				<th>사업명*</th>
+	  				<th><span style="color: red">* </span>사업명</th>
 					<td>
 						<input type="text" id="eProjectName" name="eProjectName" style="width:90%; text-align: left;padding-left: 5px;"  value="${projectInfo.eProjectName}" maxlength="30"/>
 					</td>
@@ -274,7 +274,7 @@ function deleteGyeoljaeList(){
 					</td>
 				</tr>
 				<tr>
-					<th>담당자명*</th>
+					<th><span style="color: red">* </span>담당자명</th>
 					<td>
 						<input type="text" id="eManager" name="eManager" style="width:90%; text-align: left;padding-left: 5px;"  maxlength="30"  value="${projectInfo.eManager}"  />
 					</td>

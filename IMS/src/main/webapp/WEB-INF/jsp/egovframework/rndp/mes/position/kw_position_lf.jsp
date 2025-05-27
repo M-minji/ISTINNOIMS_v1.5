@@ -235,7 +235,7 @@
 		<div class="content_top">
 			<div class="content_tit">
 				<h2>
-					부서 현황
+					부서 관리
 				</h2>
 			</div>
 		</div>	
@@ -352,7 +352,7 @@
 													<input type="hidden" id="kPositionPath_${i.index}" name="kPositionPath" value="${list3.kPositionPath}"/>
 												</td>
 											</tr>
-											<tr id="update_${i.index}" class="update">
+											<tr id="update_${i.index}" class="update" style="display:none; background-color:#F3F9FF !important;">
 												<td>
 													${list3.kPositionPath}
 												</td>

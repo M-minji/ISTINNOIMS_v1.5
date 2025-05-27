@@ -367,7 +367,7 @@ function eDownloadAll(fileGubun){
 			<table>
 				<tbody>
   				<tr>
-	  				<th>사업명*</th>
+	  				<th>사업명</th>
 					<td>${projectInfo.eProjectName}
 						<input type="hidden" id="eProjectName" name="eProjectName" style="width:90%; text-align: left;padding-left: 5px;"  value="" maxlength="50"/>
 					</td>
@@ -382,7 +382,7 @@ function eDownloadAll(fileGubun){
 					</td>
 				</tr>
 				<tr>
-					<th>담당자명*</th>
+					<th>담당자명</th>
 					<td>${projectInfo.eManager}
 						<input type="hidden" id="eManager" name="eManager" style="width:90%; text-align: left;padding-left: 5px;"  maxlength="30"  value=""  />
 					</td>
@@ -410,9 +410,9 @@ function eDownloadAll(fileGubun){
 					</td>
 				</tr>
 				<tr>
-					<th>기타</th>
+					<th>비고</th>
 					<td id="td_editor" colspan="3" align="center" scope="row">${projectInfo.eRemarks}</td>
-					<th>사업진행*</th>
+					<th><span style="color: red">* </span>진행상태</th>
 					<td> 
 						<input type="text" id="eProjectStatus" name="eProjectStatus" style="width:90%; text-align: left;padding-left: 5px;"  maxlength="30"  value="${projectInfo.eProjectStatus eq '등록' ? '' : projectInfo.eProjectStatus}"  />
 					</td>
@@ -455,7 +455,7 @@ function eDownloadAll(fileGubun){
 					<thead>
 						<tr>
 							<th style="width: 8%;">구분</th>
-							<th style="width: 10%;">산출물명*</th>
+							<th style="width: 10%;"><span style="color: red">* </span>산출물명</th>
 							<th style="width: 10%;">등록일자</th>
 							<th style="width: 12%;">소속</th> 
 							<th style="width: 12%;">작성자</th> 
@@ -537,7 +537,7 @@ function eDownloadAll(fileGubun){
 						<thead>
 						<tr>
 							<th style="width: 8%;">구분</th>
-							<th style="width: 10%;">산출물명*</th>
+							<th style="width: 10%;"><span style="color: red">* </span>산출물명</th>
 							<th style="width: 10%;">등록일자</th>
 							<th style="width: 12%;">소속</th> 
 							<th style="width: 12%;">작성자</th> 
@@ -620,7 +620,7 @@ function eDownloadAll(fileGubun){
 						<thead>
 						<tr>
 							<th style="width: 8%;">구분</th>
-							<th style="width: 10%;">산출물명*</th>
+							<th style="width: 10%;"><span style="color: red">* </span>산출물명</th>
 							<th style="width: 10%;">등록일자</th>
 							<th style="width: 12%;">소속</th> 
 							<th style="width: 12%;">작성자</th> 
@@ -702,7 +702,7 @@ function eDownloadAll(fileGubun){
 						<thead>
 						<tr>
 							<th style="width: 8%;">구분</th>
-							<th style="width: 10%;">산출물명</th>
+							<th style="width: 10%;"><span style="color: red">* </span>산출물명</th>
 							<th style="width: 10%;">등록일자</th>
 							<th style="width: 12%;">소속</th> 
 							<th style="width: 12%;">작성자</th> 

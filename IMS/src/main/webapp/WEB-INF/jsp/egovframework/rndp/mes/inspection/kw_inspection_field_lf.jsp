@@ -44,6 +44,13 @@ function go_upd(key){
 		document.listForm.submit();
 }
 
+new gridjs.Grid({
+	  columns: ['No.', '이름', '필드1', '필드2', '필드3', '필드4', '필드5'],
+	  data: [], // 빈 데이터
+	  language: {
+	    noRecordsFound: '조회 정보가 없습니다.'
+	  }
+	}).render(document.getElementById("myTable"));
 
 </script>
 
@@ -134,11 +141,6 @@ td a {
 			                  </tr>
 			            </c:forEach>
 			        </c:when>
-			        <c:otherwise>
-			            <tr>
-			                <td colspan="8" class="tac">데이터가 없습니다.</td>
-			            </tr>
-			        </c:otherwise>
 			    </c:choose>
 			</tbody>
 		</table>

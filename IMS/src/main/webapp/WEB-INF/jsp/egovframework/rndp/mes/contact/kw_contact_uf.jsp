@@ -50,7 +50,7 @@ function cancel(){
 	
 	<div class="content_top">
 		<div class="content_tit">
-			<h2>관리자 정보 수정</h2>
+			<h2>담당자 정보 수정</h2>
 		</div>
 	</div>
 	
@@ -58,11 +58,11 @@ function cancel(){
         <table>
 	       	<thead>
 	       		<tr>
-	           		<th>소속사명</th>
-       				<th>부서명</th>
-       				<th>담당자명*</th>
+	           		<th>소속사</th>
+       				<th>부서</th>
+       				<th><span style="color: red">* </span>담당자명</th>
        				<th>연락처</th>
-       				<th>메일</th>
+       				<th>이메일</th>
        				<th>기타</th>
 	       		</tr>
 	       	</thead>

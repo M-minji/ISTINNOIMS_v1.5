@@ -9,7 +9,7 @@ function memberIn(){
 	    const className = document.getElementById("kClassName").value.trim();
 
 	    if (rank === "") {
-	        alert("순위를 입력하세요.");
+	        alert("순서를 입력하세요.");
 	        document.getElementById("kClassRank").focus();
 	        return false;
 	    }
@@ -34,7 +34,7 @@ function filterNumericOnly(input) {
 	
 		<div class="content_top">
 			<div class="content_tit">
-				<h2>직급 관리 등록</h2>
+				<h2>직급 등록</h2>
 			</div>
 		</div>
 		
@@ -42,13 +42,13 @@ function filterNumericOnly(input) {
 			<table>
 				<tbody>
 					<tr>
-						<th>순위</th>
+						<th><span style="color: red">* </span>순서</th>
 						<td>
 							<input type="text" name="kClassRank" id="kClassRank" maxlength="4" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onchange="filterNumericOnly(this)"  />
 						</td>
 					</tr>
 					<tr>
-						<th>직급명</th>
+						<th><span style="color: red">* </span>직급명</th>
 						<td>
 							<input type="text" name="kClassName" id="kClassName"   maxlength="20"/>
 						</td>

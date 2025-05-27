@@ -166,7 +166,7 @@ function excelDown(){
 	       		</c:forEach>
 	       		<c:if test="${empty LogList}">
 	       			<tr>
-	       				<td colspan="12">내역이 없습니다.</td>
+	       				<td colspan="12">조회 정보가 없습니다.</td>
 	       			</tr>
 	       		</c:if>
 	       	</tbody>
