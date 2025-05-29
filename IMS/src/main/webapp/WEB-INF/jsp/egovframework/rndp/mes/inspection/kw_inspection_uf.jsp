@@ -721,7 +721,7 @@
 					</td>
   				</tr>
 				<tr>
-					<th>점검구분*</th>
+					<th><span style="color: red">* </span>점검구분</th>
 					<td> 
 						<input type="hidden" id="eInspectionTypeName" name="eInspectionTypeName" value="${selInfo.eInspectionTypeName}" />
 							<select id='eInspectionType' name='eInspectionType' style="width: 100px;"  onchange="selectName(this,'eInspectionTypeName')" >
@@ -731,7 +731,7 @@
 								</c:forEach>
 							</select>
 					</td>
-					<th>점검주기*</th>
+					<th><span style="color: red">* </span>점검주기</th>
 					<td>
 						<input type="hidden" id="eInspectionCycleName" name="eInspectionCycleName" value="${selInfo.eInspectionCycleName}" />
 							<select id='eInspectionCycle' name='eInspectionCycle' style="width: 100px;"  onchange="selectName(this,'eInspectionCycleName')" >
@@ -744,16 +744,16 @@
 				
 				</tr>
 				<tr>
-					<th>점검일자*</th>
+					<th><span style="color: red">* </span>점검일자</th>
 					<td colspan="3">
 						<input type="text" name="eInspectionDate" id="eInspectionDate" style="width:120px; text-align:center;" class="inp_color"   value="${selInfo.eInspectionDate}"  readonly="readonly"/>
 					</td>
 				</tr> 
 				<tr>
-					<th>*점검자</th>
+					<th><span style="color: red">* </span>점검자</th>
 					<td>
 						<input type="text" id="eInspector" name="eInspector" style="width:75%;" maxLength="50" value="${selInfo.eInspector}"   />
-						<a class="mes_btn" onclick="selectWorkerPop('R', 'eInspector')" style="float: right; margin-right: 10px;" >담당자 선택</a>
+						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eInspector')" style="float: right; margin-right: 10px;" >담당자 선택</a>
 						<input type="hidden" name="eInspectionResult" id="eInspectionResult" style="width:95%; text-align:left;" maxLength="50" value="${selInfo.eInspectionResult}"/>
 						<input type="hidden" name="eRequester" id="eRequester" style="width:95%; text-align:left;" maxLength="50" value="${selInfo.eRequester}"/>
 						<input type="hidden" name="eOther" id="eOther" style="width:95%; text-align:left;" maxLength="50" value=""/>
@@ -778,17 +778,19 @@ ${selInfo.eRemark}
 			</tbody>
 		</table>
 	</div>
-	<div class="tbl_list">
+	<div class="normal_table">
 		<table>
+				<colgroup>
+				<col style="width: 200px" />
+				<col />
+			</colgroup>
 			<thead>
 				<tr>
-					<th colspan="2">
-					 <a class="mes_btn" onclick="addFile()" >파일 선택</a>
-					</th>
+					<th colspan="2">점검 서류  <a class="form_btn md ml5" onclick="addFile()" >파일 선택</a></th>
 				</tr>
 				<tr>
-					<th style="width: 25%;">구분</th>
-					<th style="width: 75%;">첨부  파일명</th>
+					<th style="width: 200px;">구분</th>
+					<th style="width: 75%;">파일명</th>
 				</tr>
 			</thead>
 			<tbody id="fileRow">
@@ -811,33 +813,53 @@ ${selInfo.eRemark}
 			</tbody>
 		</table>
 	</div> 
+	
 	<c:if test="${not empty eResultInfoList}">
-		<div class="tbl_list">
+		<div class="content_top nofirst with_btn notit" id="viewDiv1">
+				<div class="btns">
+					<button type="button" onclick="sel_asset()" class="form_btn md">장비 선택</button>
+					 <button type="button" onclick="sel_field()" class="form_btn md">필드 선택</button>
+				</div>
+			</div>
+			<div class="normal_table">
 			<table>
-				<caption style="text-align: left; margin-bottom:10px;">
-					<a class="mes_btn" onclick="sel_asset()" style="float:right; margin-right:10px; margin-left:10px;">장비 선택</a>
-				   <a class="mes_btn" onclick="sel_field()" style="float:right">필드 선택</a>
-				</caption>
+				<colgroup>
+					<col style="width: 50px;" />
+					<col style="width: 80px;" />
+					<col />
+					<col />
+					<col />
+					<col style="width: 80px;" />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+				</colgroup>
 				<thead>
 					<tr>
 						<th colspan="15">장비 정보</th>
 					</tr>
 					<tr>
-						<th style="width: 5%;">구분</th>
-						<th style="width: 7%;">자산유형</th>
-						<th style="width: 7%;">자산명</th>
-						<th style="width: 7%;">제조사</th>
-						<th style="width: 7%;">모델명</th>
-						<th style="width: 7%;">망구분</th>
-						<th style="width: 5%;">장비구분</th>
-						<th id="field1" style="width: 5%;">${fieldInfo.eField1}</th>
-						<th id="field2" style="width: 5%;">${fieldInfo.eField2}</th>
-						<th id="field3" style="width: 5%;">${fieldInfo.eField3}</th>
-						<th id="field4" style="width: 5%;">${fieldInfo.eField4}</th>
-						<th id="field5" style="width: 5%;">${fieldInfo.eField5}</th>
-						<th style="width: 5%;">점검일자</th>
-						<th style="width: 5%;">점검결과</th>
-						<th style="width: 5%;">비고</th>
+						<th>구분</th>
+						<th>자산유형</th>
+						<th>자산명</th>
+						<th>제조사</th>
+						<th>모델명</th>
+						<th>망구분</th>
+						<th>장비구분</th>
+						<th id="field1">${fieldInfo.eField1}</th>
+						<th id="field2">${fieldInfo.eField2}</th>
+						<th id="field3">${fieldInfo.eField3}</th>
+						<th id="field4">${fieldInfo.eField4}</th>
+						<th id="field5">${fieldInfo.eField5}</th>
+						<th>점검일자</th>
+						<th>점검결과</th>
+						<th>비고</th>
 					</tr>
 				</thead>
 				<tbody id="lineRow">
@@ -870,7 +892,7 @@ ${selInfo.eRemark}
 				 		<input type='text' id='eField5_${i.index}' name='eField5' style="width: 98%;" maxlength="50"  value='${list.eField5}'/>
 				 	</td>
 				 	<td>
-				 		<input type='text' id='eItemInspectionDate_${i.index}' name='eItemInspectionDate' style="width: 98%;" maxlength="50"  value='${list.eItemInspectionDate}'/>
+				 		<input type='text' id='eItemInspectionDate_${i.index}' name='eItemInspectionDate' style="width: 98%;" maxlength="50" value='${list.eItemInspectionDate}'/>
 				 	</td>
 				 	<td>
 				 		<input type='text' id='eItemRemark_${i.index}' name='eItemRemark' style="width: 98%;" maxlength="50"  value='${list.eItemRemark}'/>
@@ -886,44 +908,53 @@ ${selInfo.eRemark}
 <!-- 				</tr> -->
 				</tbody>
 			</table>
-		</div>
+			</div>
 	</c:if>
-	<div style="margin-top:30px;">   
-		<div class="tbl_top">
-			<ul class="tbl_top_left">
-				<li>
-				
-					<a onclick="approvalPop();">승인권자 선택</a>
-					 <label for="oPass" class="checkbox-container">
-						결재 제외<input type="checkbox" id="oPass" name="oPass" class="checkbox" onclick="handleOPassClick();"/>
-					</label>
-				</li>
-			</ul>
+	
+	<div class="content_top nofirst with_btn">
+		<div class="content_tit flex">
+			<h2>승인권자</h2>
+			<label for="oPass" class="inp_chkbox">
+				<input type="checkbox" id="oPass" name="oPass" class="checkbox" onclick="handleOPassClick();"/>
+				<i></i>
+				결재 제외
+			</label>
 		</div>
-			
-		<div class="tbl_list">
-			<table>
-				<thead>
+		<div class="btns">
+			 <button type="button" onclick="approvalPop()" class="form_btn md">승인권자 선택</button>
+		</div>
+	</div>
+	<div class="normal_table">
+		<table>
+			<colgroup>
+				<col style="width: 200px;"/>
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
+			<thead>
 					<tr>
-						<th colspan="5">결재 정보</th>
+						<th colspan="3">결재 정보</th>
 					</tr>
 					<tr>
 						<th style="width: 10%;">결재순서</th>
-						<th style="width: 20%;">부서</th>
-						<th style="width: *%;">성명</th>
+						<th style="width: 10%;">결재구분</th>
+						<th style="width: *%;">결재자</th>
 					</tr>
 				</thead>
 				<tbody id="lineRow3"> 
 					<c:forEach var="slist" items="${signList}" varStatus="j">
 							<tr>
 								<td>
+									<a class='del' onclick="delRowTwo(this);">X</a>
+			
 									<input type='hidden' id='sSignStaffKey_${j.index}' name='sSignStaffKey' value='${slist.sSignStaffKey}'/>
 									<input type='hidden' id='sSignStaffPosition_${j.index}' name='sSignStaffPosition' value='${slist.sSignStaffPosition}'/>
 									<input type='hidden' id='sSignStaffName_${j.index}' name='sSignStaffName' value='${slist.sSignStaffName}'/>
 									<input type='hidden' id='sSignSequence_${j.index}' name='sSignSequence' value='${slist.sSignSequence}'/>
 									<input type='hidden' id='sSignStaffGubun_${j.index}' name='sSignStaffGubun' value='${slist.sSignStaffGubun}'/>
-									<input type='hidden' id='referSign_${j.index}' name='referSign' value='${slist.sSignStaffKey}'/>
-									<input type='hidden' id='gubun_${j.index}' name='gubun' value='${slist.sSignStaffGubun}'/>
+								</td>
+							
+								<td>
 									<span id='sn_sp_${j.index}' class='sn_sp'>${slist.sSignSequence}</span>
 								</td>
 							
@@ -939,25 +970,16 @@ ${selInfo.eRemark}
 						</c:forEach>
 					<c:if test="${empty signList}">
 						<tr>
-							<td colspan="8" style="text-align: center;">등록 정보가 없습니다.</td>
+							<td colspan="3" style="text-align: center;">등록 정보가 없습니다.</td>
 						</tr>
 					</c:if>
 				</tbody>
-				
-			</table>
-		</div>
+		</table>
 	</div>
-	
-	<div class="tbl_btn_right">
-		<ul>
-			<c:if test="${staffVO.kStaffAuthWriteFlag eq 'T' }">
-					<li>
-						<a onclick="eModifunction();">저장</a>
-					</li>
-			</c:if>
-			<li>
-				<a onclick="cancle();">목록</a>
-			</li>
-		</ul>
+	<div class="bottom_btn">
+		<c:if test="${staffVO.kStaffAuthWriteFlag eq 'T' }">
+		<button type="button" class="form_btn active" onclick="eModifunction();">저장</button>
+		</c:if>
+		<button type="button" class="form_btn" onclick="cancle();">목록</button>
 	</div>
 </form>

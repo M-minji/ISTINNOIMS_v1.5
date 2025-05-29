@@ -747,7 +747,7 @@
 <!-- 						</span> -->
 
 <!--             		</td> -->
-					<th style="width: 15% !important;">자산유형*</th>
+					<th style="width: 15% !important;"><span style="color: red">* </span>자산유형</th>
 					<td style="width: 35% !important;" colspan="3">
 						<input type="hidden" id="eAssetTypeName" name="eAssetTypeName" />
 						<select id='eAssetType' name='eAssetType'  onchange="selectName(this,'eAssetTypeName')" style="width:120px;" >
@@ -760,7 +760,7 @@
 				</tr>
 				<tr>
 					
-					<th>처리유형*</th>
+					<th><span style="color: red">* </span>처리유형</th>
 					<td  colspan="1"> 
 						<input type="hidden" id="eProcessingTypeName" name="eProcessingTypeName" />	
 						<select id="eProcessingType" name="eProcessingType" style="width:120px;" onchange="selectName(this,'eProcessingTypeName')" >
@@ -770,7 +770,7 @@
 							</c:forEach>		       				
 		     			</select>
 					</td>
-					<th>상세구분*</th>
+					<th><span style="color: red">* </span>상세구분</th>
 					<td>
 						<input type="hidden" id="eIssueTypeName" name="eIssueTypeName" />
 						<select id="eIssueType" name="eIssueType" style="width:120px;" onchange="selectName(this,'eIssueTypeName')">
@@ -783,7 +783,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th >요청자*</th>
+					<th ><span style="color: red">* </span>요청자</th>
 					<td >
 						<input type="text" id="eRequester" name="eRequester" style="width:75%;" maxLength="50" />
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eRequester')">담당자 선택</a>
@@ -846,7 +846,7 @@
 			<h2>처리자 정보</h2>
 		</div>
 		<div class="btns">
-			<button type="button" class="form_btn md" onclick="set_eHandler()">처리자 행 추가</button>
+			<button type="button" class="form_btn md" onclick="set_eHandler()">처리자 추가</button>
 		</div>
 	</div>
 	<div class="normal_table" id="viewDiv2">
@@ -854,7 +854,7 @@
 				<thead>
 				<tr>
 					<th style="width: 10%;">구분</th>
-					<th style="width: 18%;">*처리자명</th>
+					<th style="width: 18%;"><span style="color: red">* </span>처리자명</th>
 					<th style="width: 18%;">처리자소속</th>
 					<th style="width: 18%;">처리내용</th>
 					<th style="width: 18%;">연락처</th>

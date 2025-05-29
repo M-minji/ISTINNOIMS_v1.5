@@ -496,17 +496,17 @@
 					</td>
   				</tr>
 	          	<tr>
-					<th>자산유형*</th>
+					<th>자산유형</th>
 					<td colspan="3">${issueInfo.eAssetTypeName}
 				</tr>
 				<tr>
-					<th>처리유형*</th>
+					<th>처리유형</th>
 					<td> ${issueInfo.eProcessingTypeName}</td>
-					<th>상세구분*</th>
+					<th>상세구분</th>
 					<td>${issueInfo.eIssueTypeName}	</td>
 				</tr>
 				<tr>
-					<th >요청자*</th>
+					<th >요청자</th>
 					<td > ${issueInfo.eRequester}
 						<input type="hidden" id=eRequester name="eRequester" value="${issueInfo.eRequester}" maxLength="100"/>
 					</td>

@@ -554,7 +554,7 @@
 			</colgroup>
 			<tbody>
 				<tr>
-					<th>반출일*</th>
+					<th>반출일</th>
 					<td colspan="3"><span id="eEntryExitDate"></span>
 					</td>
 				</tr>
