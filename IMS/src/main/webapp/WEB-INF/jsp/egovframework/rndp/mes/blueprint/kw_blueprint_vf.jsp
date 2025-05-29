@@ -397,7 +397,7 @@
 			<thead>
 				<tr>
 <!-- 					<th style="width: 8%;">구분</th> -->
-					<th style="width: 200px;">작업자*</th>
+					<th style="width: 200px;">작업자</th>
 					<th style="width: 12%;">작업자소속</th>
 					<th style="width: 12%;">작업일시</th>
 					<th style="width: *;">내용</th>
@@ -449,7 +449,7 @@
 			
 				<c:if test="${empty aDeteliList }">
 					<tr>
-						<td colspan="5">등록정보가 없습니다.</td>
+						<td colspan="5">등록된 상세내역이 없습니다.</td>
 					</tr>
 				</c:if>
 			</tbody>

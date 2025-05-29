@@ -516,14 +516,14 @@
 					</td>
 				</tr>
 				<tr>
-					<th>반출일*</th>
+					<th><span style="color: red">* </span>반출일</th>
 					<td colspan="3">
 						<input type="text" name="eEntryExitDate" id="eEntryExitDate" style="width:120px; text-align:center;" class="inp_color"   value=""  readonly="readonly"/>
 					</td>
 					 
 				</tr>
 				<tr>
-					<th>반출자*</th>
+					<th><span style="color: red">* </span>반출자</th>
 					<td>
 						<input type="text" id="eEntryStaff" name="eEntryStaff" style="width:75%;" maxLength="50" />
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eEntryStaff')" >담당자 선택</a>

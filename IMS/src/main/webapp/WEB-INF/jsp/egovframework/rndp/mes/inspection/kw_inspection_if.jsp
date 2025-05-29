@@ -570,7 +570,7 @@
 					</td>
   				</tr>
 				<tr>
-					<th>점검구분*</th>
+					<th><span style="color: red">* </span>점검구분</th>
 					<td>
 						<input type="hidden" id="eInspectionTypeName" name="eInspectionTypeName" />
 							<select id='eInspectionType' name='eInspectionType' style="width: 100px;"  onchange="selectName(this,'eInspectionTypeName')" required="required">
@@ -580,7 +580,7 @@
 								</c:forEach>
 							</select>
 					</td>
-					<th>점검주기*</th>
+					<th><span style="color: red">* </span>점검주기</th>
 					<td>
 						<input type="hidden" id="eInspectionCycleName" name="eInspectionCycleName" />
 							<select id='eInspectionCycle' name='eInspectionCycle' style="width: 100px;"  onchange="selectName(this,'eInspectionCycleName')"  required="required">
@@ -592,14 +592,14 @@
 					</td>
 				</tr>
 				<tr>
-					<th>점검일자*</th>
+					<th><span style="color: red">* </span>점검일자</th>
 					<td colspan="3">
 						<input type="text" name="eInspectionDate" id="eInspectionDate" style="width:120px; text-align:center;" class="inp_color"   value=""  readonly="readonly"/>
 					</td>
 				
 				</tr>
 				<tr>
-					<th>점검자*</th>
+					<th><span style="color: red">* </span>점검자</th>
 					<td>
 						<input type="text" id="eInspector" name="eInspector" style="width:75%;" maxLength="50" />
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eInspector')" >담당자 선택</a>

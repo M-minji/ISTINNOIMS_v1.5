@@ -661,11 +661,11 @@
 		<table>
 			<tbody>
           		<tr>
-            		<th>작성자*</th>
+            		<th>작성자</th>
             		<td>${assetInfo.kStaffName}
 						<input type="hidden" name="eAuthor" id="eAuthor" style="width:35%; text-align:left;"   value="${assetInfo.kStaffName}" class="inp_color"/>
             		</td>
-            		<th>등록일*</th>
+            		<th>등록일</th>
             		<td>
 						<input type="text" id="aAssetDate" name="aAssetDate" style="width:150px; text-align:center;" class="inp_color" readonly value="${assetInfo.eAssetWdate }" />
             		</td>
@@ -677,7 +677,7 @@
 		<table>
 			<tbody>
 				<tr>
-					<th>자산유형*</th>
+					<th><span style="color: red">* </span>자산유형</th>
 					<td>
 					<input type="hidden" id="eAssetTypeName" name="eAssetTypeName" value="${assetInfo.eAssetTypeName}" />
 					<select id='eAssetType' name='eAssetType'  onchange="updateAssetTypeName()" >
@@ -688,13 +688,13 @@
 						</c:forEach>
 					</select>
 					</td>
-					<th>자산번호*</th>
+					<th><span style="color: red">* </span>자산번호</th>
 					<td>
 						<input type="text" name="eAssetNumber" id="eAssetNumber" style="width:95%; text-align:left;" maxLength="100" value="${assetInfo.eAssetNumber}" onchange="eAssetNumberCheck(this)"/>
 					</td>
 				</tr>
 				<tr>
-					<th>자산명*</th>
+					<th><span style="color: red">* </span>자산명</th>
 					<td>
 						<input type="text" name="eAssetName" id="eAssetName" style="width:95%; text-align:left;" maxLength="100" value="${assetInfo.eAssetName}"/>
 					</td>
@@ -735,17 +735,17 @@
             		</td>
 				</tr>
 				<tr>
-					<th>제조사*</th>
+					<th><span style="color: red">* </span>제조사</th>
 					<td>
 						<input type="text" name="eAssetMaker" id="eAssetMaker" style="width:95%; text-align:left;" maxLength="50" value="${assetInfo.eAssetMaker}"/>
 					</td>
-					<th>모델명*</th>
+					<th><span style="color: red">* </span>모델명</th>
 					<td>
 						<input type="text" name="eAssetModel" id="eAssetModel" style="width:95%; text-align:left;" maxLength="50" value="${assetInfo.eAssetModel}"/>
 					</td>
 				</tr>
 				<tr>
-					<th>제조번호(S/N)*</th>
+					<th><span style="color: red">* </span>제조번호(S/N)</th>
 					<td>
 						<input type="text" name=eAssetSNumber id="eAssetSNumber" style="width:95%; text-align:left;" maxLength="50" value="${assetInfo.eAssetSNumber}" onchange="eAssetSNumberCheck(this)" />
 					</td>
@@ -870,7 +870,7 @@
 					<th style="width: 12%;">구매일</th> 
 					<th style="width: 12%;">만료일</th> 
 					<th style="width: 24%;">비고</th> 
-					<th style="width: 12%;">적용 수량*</th> 
+					<th style="width: 12%;"><span style="color: red">* </span>적용 수량</th> 
 				</tr>
 			</thead>
 			<tbody id="lineRowLicense">
