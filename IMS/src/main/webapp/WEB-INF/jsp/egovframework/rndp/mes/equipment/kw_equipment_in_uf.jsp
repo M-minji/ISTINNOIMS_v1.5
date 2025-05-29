@@ -644,14 +644,14 @@
            			<td><input type="text" name="eEntryWdate" id="eEntryWdate" style="width:150px; text-align:center;" class="inp_color" readonly  value="${info.eEntryWdate }" /></td>
        			</tr>	
 				<tr>
-					<th>반입일*</th>
+					<th><span style="color: red">* </span>반입일</th>
 					<td colspan="3">
 						<input type="text" name="eEntryImportDate" id="eEntryImportDate" style="width:120px; text-align:center;" class="inp_color"   value="${info.eEntryImportDate}"  readonly="readonly"/>
 					</td>
 				 
 				</tr>
 				<tr>
-					<th>반입확인자*</th>
+					<th><span style="color: red">* </span>반입확인자</th>
 					<td>
 						<input type="text" id="eEntryImporter" name="eEntryImporter" style="width:75%;" value="${info.eEntryImporter}" maxLength="50"/>
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eEntryImporter')">담당자 선택</a>
@@ -687,8 +687,8 @@
 				<thead>
 					<tr>
 						<th style="width: 8%;">구분</th>
-						<th style="width: 10%;">자산유형*</th>
-						<th style="width: 12%;">자산명*</th>
+						<th style="width: 10%;"><span style="color: red">* </span>자산유형</th>
+						<th style="width: 12%;"><span style="color: red">* </span>자산명</th>
 						<th style="width: 10%;">제조사</th>
 						<th style="width: 10%;">제조번호</th>
 						<th style="width: 10%;">모델명</th>

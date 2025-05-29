@@ -650,7 +650,7 @@ function approvalPop(){
 					
 				</tr>
   				<tr>
-	  				<th>요청자*</th>
+	  				<th><span style="color: red">* </span>요청자</th>
 					<td>
 						<input type="text" id="eRequester" name="eRequester" style="width:70%;" maxLength="50" />
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eRequester')">담당자 선택</a>
@@ -709,7 +709,7 @@ function approvalPop(){
 			<h2>상세 내역 정보</h2>
 		</div>
 		<div class="btns">
-			 <button type="button" class="form_btn md" onclick="add_row()">행추가</button>
+			 <button type="button" class="form_btn md" onclick="add_row()">내역 추가</button>
 		</div>
 	</div>
 	<div class="normal_table" id="viewDiv2">
@@ -718,7 +718,7 @@ function approvalPop(){
 				<tr>
 					<th style="width: 200px;">구분</th>
 					<th style="width: 12%;">소속</th>
-					<th style="width: 12%;">작업자*</th>
+					<th style="width: 12%;"><span style="color: red">* </span>작업자</th>
 					<th style="width: 12%;">작업일시</th>
 					<th style="width: *;">내용</th>
 					<th style="width: 14%;">첨부 파일</th>
@@ -726,7 +726,7 @@ function approvalPop(){
 			</thead>
 			<tbody id="lineRowTwo">
 				<tr>
-					<td colspan="6">행 추가 하여 정보를 입력하세요.</td>
+					<td colspan="6">상세내역을 추가 하여 정보를 입력하세요.</td>
 				</tr>
 			</tbody>
 		</table>

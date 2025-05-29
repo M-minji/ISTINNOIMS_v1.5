@@ -681,7 +681,7 @@
 					</td>
 				</tr>
   				<tr>
-	  				<th>요청자*</th>
+	  				<th><span style="color: red">* </span>요청자</th>
 					<td> 
 						<input type="text" id="eRequester" name="eRequester" style="width:70%;" maxLength="50" value="${info.eRequester}"   />
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eRequester')"  >담당자 선택</a>
@@ -740,7 +740,7 @@
 			<h2>상세 내역 정보</h2>
 		</div>
 		<div class="btns">
-			 <button type="button" class="form_btn md" onclick="add_row()" >행추가</button>
+			 <button type="button" class="form_btn md" onclick="add_row()" >내역 추가</button>
 			 <!-- <c:if test="${not empty aFileList}"><button type="button" class="form_btn md" onclick="eDownloadAll();">파일 모두 받기</button></c:if> -->
 		</div>
 	</div>
@@ -749,7 +749,7 @@
 				<thead>
 				<tr>
 					<th style="width: 8%;">구분</th>
-					<th style="width: 12%;">작업자*</th>
+					<th style="width: 12%;"><span style="color: red">* </span>작업자</th>
 					<th style="width: 12%;">작업자소속</th>
 					<th style="width: 12%;">작업일시</th>
 					<th style="width: *;">내용</th>
@@ -801,7 +801,7 @@
 			
 				<c:if test="${empty aDeteliList }">
 					<tr>
-						<td colspan="6">행 추가 하여 정보를 입력하세요.</td>
+						<td colspan="6">등록된 상세 내역이 없습니다.</td>
 					</tr>
 				</c:if>
 			</tbody>

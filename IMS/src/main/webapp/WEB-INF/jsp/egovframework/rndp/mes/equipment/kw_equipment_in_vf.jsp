@@ -262,7 +262,7 @@
 			</colgroup>
 			<tbody>
 				<tr>
-					<th>반입일*</th>
+					<th>반입일</th>
 					<td colspan="3"> ${info.eEntryImportDate}
 					</td>
 				</tr>
@@ -299,8 +299,8 @@
 				<thead>
 				<tr>
 					<th style="width: 8%;">구분</th>
-					<th style="width: 10%;">자산유형*</th>
-					<th style="width: 12%;">자산명*</th>
+					<th style="width: 10%;">자산유형</th>
+					<th style="width: 12%;">자산명</th>
 					<th style="width: 10%;">제조사</th>
 					<th style="width: 10%;">제조번호</th>
 					<th style="width: 10%;">모델명</th>

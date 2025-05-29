@@ -532,13 +532,13 @@
 					</td>
 				</tr>
 				<tr>
-					<th>교체일자*</th>
+					<th><span style="color: red">* </span>교체일자</th>
 					<td colspan="3">
 						<input type="text" name="eReplacementDate" id="eReplacementDate" style="width:120px; text-align:center;" class="inp_color"   value=""  readonly="readonly"/>
 					</td>
 				</tr>
 				<tr>
-					<th>교체확인자*</th>
+					<th><span style="color: red">* </span>교체확인자</th>
 					<td>
 						<input type="text" id="eReplacedBy" name="eReplacedBy" style="width:75%;" maxLength="50" />
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eReplacedBy')">담당자 선택</a>
@@ -571,7 +571,7 @@
 	
 	<div class="content_top nofirst with_btn notit" id="viewDiv1">
 		<div class="btns">
-			 <button type="button" class="form_btn md" onclick="sel_asset()">장비 선택*</button>
+			 <button type="button" class="form_btn md" onclick="sel_asset()">장비 선택</button>
 		</div>
 	</div>
 	

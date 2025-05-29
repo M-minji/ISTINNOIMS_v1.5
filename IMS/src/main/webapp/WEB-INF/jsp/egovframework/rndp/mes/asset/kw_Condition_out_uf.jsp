@@ -22,7 +22,8 @@
          var firstEntryStaff = $("input[name='eEntryStaff1']").first().val();
          var eEntryStaffOrg = $("input[name='eEntryStaffOrg1']").first().val();
          var eExportLocation = $("input[name='eExportLocation1']").first().val();
-         $("#eEntryExitDate").text(firstEntryExitDate);
+     //    $("#eEntryExitDate").text(firstEntryExitDate);
+   	     $("#eEntryExitDate").val(firstEntryExitDate);
          $("#eEntryRequestReason").text(firstEntryRequestReason);
          $("#eEntryStaff").text(firstEntryStaff);
          $("#eEntryStaffOrg").val(eEntryStaffOrg);
@@ -582,13 +583,13 @@
             			</td>
           			</tr>		
 				<tr>
-					<th>반출일*</th>
+					<th><span style="color: red">* </span>반출일</th>
 					<td colspan="3"> 
 						<input type="text" name="eEntryExitDate" id="eEntryExitDate" style="width:120px; text-align:center;" class="inp_color"   value="${assetInfo.eEntryExitDate }"  readonly="readonly"/>
 					</td>
 				</tr>
 				<tr>
-					<th>반출자*</th>
+					<th><span style="color: red">* </span>반출자</th>
 					<td>
 						<input type="text" id="eEntryStaff" name="eEntryStaff" style="width:75%;" value="${assetInfo.eEntryStaff}" maxLength="50"/>
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eEntryStaff')">담당자 선택</a>
@@ -615,7 +616,7 @@
 	
 	<div class="content_top nofirst with_btn notit" id="viewDiv1">
 		<div class="btns">
-			 <button type="button" class="form_btn md" onclick="sel_asset()">장비 선택*</button>
+			 <button type="button" class="form_btn md" onclick="sel_asset()">장비 선택</button>
 		</div>
 	</div>
 	

@@ -506,11 +506,11 @@
 		<table>
 			<tbody>
           		<tr>
-            		<th>작성자*</th>
+            		<th>작성자</th>
             		<td>${staffVO.kStaffName}
 						<input type="hidden" name="eAuthor" id="eAuthor" style="width:35%; text-align:left;"   value="${staffVO.kStaffName}" class="inp_color"/>
             		</td>
-            		<th>등록일*</th>
+            		<th>등록일</th>
             		<td>
 						<input type="text" id="aAssetDate" name="aAssetDate" style="width:150px; text-align:center;" class="inp_color" readonly />
             		</td>
@@ -534,13 +534,13 @@
 	          	<tr>
 	             	<th style="width: 5%;">구분</th>
 	             	<th style="width: 10%;">제조사</th>
-	             	<th style="width: 15%;">라이선스명*</th>
+	             	<th style="width: 15%;"><span style="color: red">* </span>라이선스명</th>
 	             	<th style="width: 8%;">버전</th>
 	             	<th style="width: 8%;">구매일</th>
 	             	<th style="width: 8%;">시작일 <a class="form_btn md" onclick="setDateToInputs('S')">일괄반영</a> </th>
 	             	<th style="width: 8%;">종료일 <a class="form_btn md" onclick="setDateToInputs('E')">일괄반영</a></th>
 	             	<th style="width: 8%;">유효기간</th>
-	             	<th style="width: 8%;">수량*</th>
+	             	<th style="width: 8%;"><span style="color: red">* </span>수량</th>
 	             	<th style="width: *;">첨부 파일</th>
 	            </tr>
 	         </thead>
