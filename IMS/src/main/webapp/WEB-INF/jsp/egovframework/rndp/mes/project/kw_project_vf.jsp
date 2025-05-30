@@ -307,7 +307,21 @@ function settingSign(){
 			<h2>프로젝트 상세</h2>
 		</div>
 	</div>
-	
+	<div class="normal_table row">
+		<table>
+			<tbody>
+          		<tr>
+            		<th>작성자</th>
+            		<td>${projectInfo.kStaffName}
+            		</td>
+            		<th>등록일</th>
+            		<td>
+						${projectInfo.pWdate}
+            		</td>
+          		</tr>			
+			</tbody>
+		</table>
+	</div>
 	
 	<div class="normal_table row">
 			<table>

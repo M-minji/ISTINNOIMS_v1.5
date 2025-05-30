@@ -723,12 +723,12 @@
 	
 	<div class="normal_table row">
         <table>
-	        <colgroup> 
-		    	<col style="width: 12.7%;"/> 
-		        <col style="width: 37.3%;"/> 
-		        <col style="width: 12.7%;"/> 
-		        <col style="width: 37.3%;"/> 
-		    </colgroup>
+	        <colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
 	        <tbody>
 	          	<tr>
 					<th ><span style="color: red">* </span>자산유형</th>

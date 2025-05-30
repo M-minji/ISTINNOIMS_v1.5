@@ -15,9 +15,11 @@
 $(document).ready(function(){	
 	datepickerSet('eStartDate', 'eEndDate');
 	datepickerIdSet('pWdate');
-	$("#eStartDate").val(nowDate());
-	$("#eEndDate").val(nowDate());
-	$("#pWdate").val(nowDate());
+	const today = nowDate();
+	$('#eCreationDateDisplay').text(today);
+	$("#eStartDate").val(today);
+	$("#eEndDate").val(today);
+	$("#pWdate").val(today);
 	$('#oPass').prop('checked', true);
 	$("#oSignPass").val("Y");
 });
@@ -267,7 +269,8 @@ function approvalPop(){
             		</td>
             		<th>등록일</th>
             		<td>
-						<input type="text" id="pWdate" name="pWdate" style="width:150px; text-align:center;" class="inp_color" readonly="readonly" />
+						<input type="hidden" id="pWdate" name="pWdate" style="width:150px; text-align:center;" class="inp_color" readonly="readonly" />
+						<span id="eCreationDateDisplay"></span>
             		</td>
           		</tr>			
 			</tbody>

@@ -706,7 +706,7 @@
 					 </c:if>
 			 		<c:if test="${empty eFileInfoList}">
 			 			<tr>
-			 				<td class="tac">첨부된 파일이 없습니다.</td>
+			 				<td class="tac">등록된 파일이 없습니다.</td>
 			 			</tr>
 			 		</c:if>
 			</tbody>

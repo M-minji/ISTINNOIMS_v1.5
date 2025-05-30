@@ -278,18 +278,29 @@
 			<h2>SR관리 상세</h2>
 		</div>
 	</div>
-
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
-  					<th>작성자</th>
-  					<td colspan="1"> ${info.kStaffName}</td>
-  					<th>작성일</th>
-  					<td colspan="1">${info.blueprintWdate}
-						<input type="hidden" name="blueprintWdate" id="blueprintWdate" style="width:150px; text-align:center;" class="inp_color" readonly  value="${info.blueprintWdate }" />
-  					</td>
-  				</tr>
+          		<tr>
+					<th >작성자</th>
+					<td >${info.kStaffName}
+					</td>
+					<th >등록일</th>
+					<td >${info.blueprintWdate}
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
+			<tbody>
 			 	<tr>
 	  				<th>요청일자</th>
 					<td colspan="3">${info.eReqDate }
@@ -368,7 +379,7 @@
 						 </c:forEach>
 					 </c:if>
 			 		<c:if test="${empty eFileInfoList}">
-			 		<tr> <td>첨부된 파일이 없습니다.</td></tr>
+			 		<tr> <td>등록된 파일이 없습니다.</td></tr>
 			 		</c:if>
 			</tbody>
 		</table>

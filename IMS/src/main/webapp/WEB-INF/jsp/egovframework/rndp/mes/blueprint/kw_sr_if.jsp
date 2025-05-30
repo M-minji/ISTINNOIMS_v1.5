@@ -14,8 +14,10 @@
 $(document).ready(function(){
 	datepickerIdSet("eReqDate");
 	datepickerIdSet("blueprintWdate");
-	$("#eReqDate").val(nowDate());
-	$("#blueprintWdate").val(nowDate());
+	const today = nowDate();
+	$('#blueprintWdateDisplay').text(today);
+	$("#eReqDate").val(today);
+	$("#blueprintWdate").val(today);
 	$('#oPass').prop('checked', true);
 	$("#oSignPass").val("Y");
 });
@@ -500,18 +502,31 @@ function approvalPop(){
 			<h2>SR 정보 등록</h2>
 		</div>
 	</div>
-	
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
-  					<th>작성자</th>
-  					<td colspan="1"> ${staffVo.kStaffName}</td>
-  					<th>작성일</th>
-					<td>
-						<input type="text" id="blueprintWdate" name="blueprintWdate" style="width:150px; text-align:center;" class="inp_color" readonly   />
+          		<tr>
+					<th >작성자</th>
+					<td >${staffVo.kStaffName}
 					</td>
-  				</tr>
+					<th >등록일</th>
+					<td >
+						<input type="hidden" id="blueprintWdate" name="blueprintWdate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
+						<span id="blueprintWdateDisplay"></span>
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
+			<tbody>
   				<tr>
 					<th>요청일자</th>
 					<td colspan="3">
@@ -521,7 +536,7 @@ function approvalPop(){
 				</tr>
   				<tr>
 					 
-	  				<th>요청자*</th>
+	  				<th><span style="color: red">* </span>요청자</th>
 					<td>
 						<input type="text" id="eRequester" name="eRequester" style="width:70%;" maxLength="50" />
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eRequester')" >담당자 선택</a>

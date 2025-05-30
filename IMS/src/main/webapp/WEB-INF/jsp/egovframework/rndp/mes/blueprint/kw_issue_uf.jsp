@@ -674,18 +674,30 @@ $(document).ready(function(){
 			<h2>문제관리 정보 수정 페이지</h2>
 		</div>
 	</div>
-
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
-  					<th>작성자</th>
-  					<td colspan="1"> ${info.kStaffName}</td>
-  					<th>작성일</th>
-  					<td colspan="1"> 
-						<input type="text" name="blueprintWdate" id="blueprintWdate" style="width:150px; text-align:center;" class="inp_color" readonly  value="${info.blueprintWdate }" />
-  					</td>
-  				</tr>
+          		<tr>
+					<th >작성자</th>
+					<td >${info.kStaffName}
+					</td>
+					<th >등록일</th>
+					<td >${info.blueprintWdate }
+						<input type="hidden" id="blueprintWdate" name="blueprintWdate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
+			<tbody>
 			 	<tr>
 	  				<th>요청일자</th>
 					<td colspan="3"> 
@@ -693,7 +705,7 @@ $(document).ready(function(){
 					</td>
 				</tr>
   				<tr>
-	  				<th>요청자*</th>
+	  				<th><span style="color: red">* </span>요청자</th>
 					<td>
 						<input type="text" id="eRequester" name="eRequester" style="width:70%;" value="${info.eRequester}" maxLength="50"/>
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eRequester')">담당자 선택</a>
@@ -753,7 +765,7 @@ $(document).ready(function(){
 			<h2>회의록 정보</h2>
 		</div>
 		<div class="btns">
-			 <button type="button" class="form_btn md" onclick="addNotesList()">행추가</button>
+			 <button type="button" class="form_btn md" onclick="addNotesList()">회의록 추가</button>
 		</div>
 	</div>
 	<div class="normal_table" id="viewDiv2">
@@ -761,7 +773,7 @@ $(document).ready(function(){
 			<thead>
 				<tr>
 					<th style="width: 8%;">구분</th>
-					<th style="width: 18%;">회의참여자*</th>
+					<th style="width: 18%;"><span style="color: red">* </span>회의참여자</th>
 					<th style="width: 18%;">참여자소속</th>
 					<th style="width: 18%;">역할</th>
 					<th style="width: 18%;">연락처</th>
@@ -799,7 +811,7 @@ $(document).ready(function(){
 			
 				<c:if test="${empty aNotesList }">
 					<tr>
-						<td colspan="6">행 추가 하여 정보를 입력하세요.</td>
+						<td colspan="6">회의록을 추가 하여 정보를 입력하세요.</td>
 					</tr>
 				</c:if>
 			</tbody>
@@ -811,7 +823,7 @@ $(document).ready(function(){
 			<h2>상세 내역 정보</h2>
 		</div>
 		<div class="btns">
-			 <button type="button" onclick="add_row()" class="form_btn md">행추가</button>
+			 <button type="button" onclick="add_row()" class="form_btn md">내역 추가</button>
 <%-- 						<c:if test="${not empty aFileList}"> <button type="button" class="form_btn md" onclick="eDownloadAll();">파일 모두 받기</button></c:if> --%>
 		</div>
 	</div>
@@ -820,7 +832,7 @@ $(document).ready(function(){
 				<thead>
 				<tr>
 					<th style="width: 8%;">구분</th>
-					<th style="width: 12%;">작업자*</th>
+					<th style="width: 12%;"><span style="color: red">* </span>작업자</th>
 					<th style="width: 12%;">작업자소속</th>
 					<th style="width: 12%;">작업일시</th>
 					<th style="width: *;">내용</th>
@@ -872,7 +884,7 @@ $(document).ready(function(){
 			
 				<c:if test="${empty aDeteliList }">
 					<tr>
-						<td colspan="10">행 추가 하여 정보를 입력하세요.</td>
+						<td colspan="10">상세내역을 추가 하여 정보를 입력하세요.</td>
 					</tr>
 				</c:if>
 			</tbody>
