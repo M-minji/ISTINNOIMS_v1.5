@@ -431,8 +431,8 @@
 						<input type="hidden" name="eAuthor" id="eAuthor" style="width:95%; text-align:left;" maxLength="100" value="${swInfo.eAuthor}"/>
             		</td>
             		<th>등록일</th>
-            		<td>
-						<input type="text" id="aAssetDate" name="aAssetDate" style="width:150px; text-align:center;" class="inp_color" readonly value="${swInfo.aAssetDate}"/>
+            		<td>${swInfo.aAssetDate}
+						<input type="hidden" id="aAssetDate" name="aAssetDate" style="width:150px; text-align:center;" class="inp_color" readonly value="${swInfo.aAssetDate}"/>
             		</td>
           		</tr>			
 			</tbody>

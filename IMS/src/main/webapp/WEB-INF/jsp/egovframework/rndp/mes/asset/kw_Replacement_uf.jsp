@@ -534,18 +534,30 @@
 			<h2>부품 교체 정보 수정</h2>
 		</div>
 	</div>
-	
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
-					<th>작성자</th>
-					<td>${info.kStaffName }
-					<th>작성일</th>
-					<td>
-						<input type="text" name="eReplacementRequestDate" id="eReplacementRequestDate" style="width:120px; text-align:center;" class="inp_color"   value="${info.eReplacementRequestDate }"  readonly="readonly"/>
+          		<tr>
+					<th >작성자</th>
+					<td >${info.kStaffName }
 					</td>
-				</tr>
+					<th >등록일</th>
+					<td >${info.eReplacementRequestDate }
+						<input type="hidden" id="eReplacementRequestDate" name="eReplacementRequestDate" style="width:120px;text-align: center;" class="inp_color" value="${info.eReplacementRequestDate }" readonly="readonly" />
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
+			<tbody>
 				<tr>
 					<th><span style="color: red">* </span>교체일자</th>
 					<td colspan="3">

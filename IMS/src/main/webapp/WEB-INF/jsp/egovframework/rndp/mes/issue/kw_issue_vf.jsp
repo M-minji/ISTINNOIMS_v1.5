@@ -505,12 +505,12 @@
 	
 	<div class="normal_table row">
         <table>
-        <colgroup> 
-		    	<col style="width: 12.7%;"/> 
-		        <col style="width: 37.3%;"/> 
-		        <col style="width: 12.7%;"/> 
-		        <col style="width: 37.3%;"/> 
-		    </colgroup>
+       		 <colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
 	        <tbody>	
 	          	<tr>
 					<th>자산유형</th>
@@ -575,7 +575,7 @@
 						 </c:forEach>
 					 </c:if>
 			 		<c:if test="${empty eFileInfoList}">
-			 			<tr><td class="tac">첨부된 파일이 없습니다.</td></tr>
+			 			<tr><td class="tac">등록된 파일이 없습니다.</td></tr>
 			 		</c:if>
 			</tbody>
 		</table>

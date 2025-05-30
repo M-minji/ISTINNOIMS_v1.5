@@ -254,7 +254,21 @@ function deleteGyeoljaeList(){
 			<h2>프로젝트 정보 수정 페이지</h2>
 		</div>
 	</div>
-	
+	<div class="normal_table row">
+		<table>
+			<tbody>
+          		<tr>
+            		<th>작성자</th>
+            		<td>${projectInfo.kStaffName}
+            		</td>
+            		<th>등록일</th>
+            		<td>
+						${projectInfo.pWdate}
+            		</td>
+          		</tr>			
+			</tbody>
+		</table>
+	</div>
 	<div class="normal_table row">
 			<table>
 				<tbody>

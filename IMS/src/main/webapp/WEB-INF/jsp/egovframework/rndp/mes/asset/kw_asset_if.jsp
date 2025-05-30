@@ -18,9 +18,10 @@
 		 $('#oPass').prop('checked', true);
 		 $("#oSignPass").val("Y");
 		
-		 
-		$('#eAssetDate').val(nowDate());
-		$('#aAssetDate').val(nowDate());
+		const today = nowDate();
+		$('#eCreationDateDisplay').text(today);
+		$('#eAssetDate').val(today);
+		$('#aAssetDate').val();
 		
 		$("#filename").change(function(){
 	         readURL(this);
@@ -723,7 +724,8 @@
             		</td>
             		<th>등록일</th>
             		<td>
-						<input type="text" id="aAssetDate" name="aAssetDate" style="width:150px; text-align:center;" class="inp_color" readonly />
+						<input type="hidden" id="aAssetDate" name="aAssetDate" style="width:150px; text-align:center;" class="inp_color" readonly />
+						<span id="eCreationDateDisplay"></span>
             		</td>
           		</tr>			
 			</tbody>

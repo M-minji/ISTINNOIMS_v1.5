@@ -573,15 +573,27 @@
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
-            		<th>작성자</th>
-            			<td>${assetInfo.kStaffName }</td>
-	            		
-            			<th>작성일</th>
-            			<td>
-            				<input type="text" id="eAssetWdate" name="eAssetWdate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" value="${assetInfo.eAssetWdate }" />
-            			</td>
-          			</tr>		
+          		<tr>
+					<th >작성자</th>
+					<td >${assetInfo.kStaffName }
+					</td>
+					<th >등록일</th>
+					<td >${assetInfo.eAssetWdate }
+						<input type="hidden" id="eAssetWdate" name="eAssetWdate" style="width:120px;text-align: center;" class="inp_color" value="${assetInfo.eAssetWdate }" readonly="readonly" />
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
+			<tbody>	
 				<tr>
 					<th><span style="color: red">* </span>반출일</th>
 					<td colspan="3"> 

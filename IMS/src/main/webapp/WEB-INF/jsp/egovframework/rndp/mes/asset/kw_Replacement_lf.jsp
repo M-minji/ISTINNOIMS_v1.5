@@ -21,7 +21,7 @@ $(function(){
 	  $('table[role="grid"].gridjs-table th:nth-child(2)').css('width', '120px'); 
 	  $('table[role="grid"].gridjs-table th:nth-child(3)').css('width', '100px'); 
 	  $('table[role="grid"].gridjs-table th:nth-child(4)').css('width', '120px'); 
-	  $('table[role="grid"].gridjs-table th:nth-child(5)').css('width', '100px'); 
+	  $('table[role="grid"].gridjs-table th:nth-child(5)').css('width', '110px'); 
 	  $('table[role="grid"].gridjs-table th:nth-child(6)').css('width', '120px'); 
 	  $('table[role="grid"].gridjs-table th:nth-child(7)').css('width', '120px'); 
 	  $('table[role="grid"].gridjs-table th:nth-child(8)').css('width', '120px'); 
