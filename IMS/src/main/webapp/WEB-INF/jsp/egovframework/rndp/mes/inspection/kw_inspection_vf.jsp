@@ -613,21 +613,26 @@
 			<h2>점검관리 상세</h2>
 		</div>
 	</div>
-	
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
+          		<tr>
 					<th >작성자</th>
 					<td >${selInfo.eRegistrant}
 						<input type="hidden" id="eRegistrant" name="eRegistrant"  value="${selInfo.kStaffName}" maxlength="50"/>
 						<input type="hidden" id="eStaffKey" name="eStaffKey"  value="${selInfo.kStaffKey}" maxlength="50"/>
 					</td>
-					<th >작성일</th>
+					<th >등록일</th>
 					<td >${selInfo.eRegistrationDate}
 						<input type="hidden" id="eRegistrationDate" name="eRegistrationDate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
 					</td>
-  				</tr>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<tbody>
 				<tr>
 					<th>점검구분</th>
 					<td>${selInfo.eInspectionTypeName}

@@ -22,6 +22,9 @@
 		toggleViewProcess();
 // 		datepickerIdSet("eActualWorkDate");
 		settingSign();
+		$("#process_go").on("click", function() {
+		    process_go();
+		  });
 	});
 	
 	 function toggleViewProcess() {
@@ -483,18 +486,32 @@
 	</div>
 	
 	<div class="normal_table row">
-        <table>
-	        <tbody>	
-    			<tr>
+		<table>
+			<tbody>
+          		<tr>
 					<th >작성자</th>
 					<td >${issueInfo.eAuthor}
-						<input type="hidden" id="eAuthor" name="eAuthor"  value="${issueInfo.eAuthor}" maxlength="50"/>
+						 <input type="hidden" id="eAuthor" name="eAuthor"  value="${issueInfo.eAuthor}" maxlength="50"/>
 					</td>
-					<th >작성일</th>
-					<td >${issueInfo.eCreationDate}
+					<th >등록일</th>
+					<td >
+						${issueInfo.eCreationDate}
 						<input type="hidden" id="eCreationDate" name="eCreationDate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
 					</td>
-  				</tr>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="normal_table row">
+        <table>
+        <colgroup> 
+		    	<col style="width: 12.7%;"/> 
+		        <col style="width: 37.3%;"/> 
+		        <col style="width: 12.7%;"/> 
+		        <col style="width: 37.3%;"/> 
+		    </colgroup>
+	        <tbody>	
 	          	<tr>
 					<th>자산유형</th>
 					<td colspan="3">${issueInfo.eAssetTypeName}
