@@ -11,8 +11,10 @@
 	$(document).ready(function(){
 		datepickerIdSet("eRegistrationDate");
 		datepickerIdSet("eInspectionDate");
-		$('#eInspectionDate').val(nowDate());
-		$('#eRegistrationDate').val(nowDate());
+		const today = nowDate();
+		$('#eInspectionDate').val(today);
+		$('#eRegistrationDate').val(today);
+		$('#eRegistrationDateDisplay').text(today);
 		
 		$('#oPass').prop('checked', true);
 		$("#oSignPass").val("Y");
@@ -558,17 +560,26 @@
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
+          		<tr>
 					<th >작성자</th>
 					<td >${staffVO.kStaffName}
 						<input type="hidden" id="eRegistrant" name="eRegistrant"  value="${staffVO.kStaffName}" maxlength="50"/>
 						<input type="hidden" id="eStaffKey" name="eStaffKey"  value="${staffVO.kStaffKey}" maxlength="50"/>
 					</td>
-					<th >작성일</th>
+					<th >등록일</th>
 					<td >
-						<input type="text" id="eRegistrationDate" name="eRegistrationDate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
+						<input type="hidden" id="eRegistrationDate" name="eRegistrationDate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
+						<span id="eRegistrationDateDisplay"></span>
 					</td>
-  				</tr>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="normal_table row">
+		<table>
+			<tbody>
+				
 				<tr>
 					<th><span style="color: red">* </span>점검구분</th>
 					<td>

@@ -11,7 +11,9 @@
 <script type="text/javascript">
 	$(document).ready(function(){	
 		datepickerSet("eRequestDate", "eProcessingDate");
-		$("#eCreationDate").val(nowDate());
+		const today = nowDate();
+		$("#eCreationDate").val(today);
+		$("#eCreationDateDisplay").text(today);
 		set_eHandler();
 // 		getCateData(1);  10월 2일 요청사항으로 제외처리
 // 		settting1();
@@ -702,53 +704,35 @@
 	</div>
 	
 	<div class="normal_table row">
-        <table>
-	        <tbody>
-	        	<tr>
+		<table>
+			<tbody>
+          		<tr>
 					<th >작성자</th>
 					<td >${staffVo.kStaffName}
 						 <input type="hidden" id="eAuthor" name="eAuthor"  value="${staffVo.kStaffName}" maxlength="50"/>
 					</td>
-					<th >작성일</th>
+					<th >등록일</th>
 					<td >
-						<input type="text" id="eCreationDate" name="eCreationDate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
+						<input type="hidden" id="eCreationDate" name="eCreationDate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
+						<span id="eCreationDateDisplay"></span>
 					</td>
-  				</tr>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="normal_table row">
+        <table>
+	        <colgroup> 
+		    	<col style="width: 12.7%;"/> 
+		        <col style="width: 37.3%;"/> 
+		        <col style="width: 12.7%;"/> 
+		        <col style="width: 37.3%;"/> 
+		    </colgroup>
+	        <tbody>
 	          	<tr>
-<!-- 					<th style="width:15%;">*요청기관</th> -->
-<!-- 					<td>  -->
-<!--             		 <input type="hidden" id="eIssueCateKey" name="eIssueCateKey" value="0"/> -->
-<!-- 						<input type="hidden" id="eIssueCateName" name="eMaintanceCateName" value=""/> -->
-<!-- 						<input type="hidden" id="eIssueSelect0" name="eIssueSelect0" value="0"/> -->
-						
-<!-- 						<span id="eIssueCate1"> -->
-<!-- 							<select id="eIssueSelect1" name="eIssueSelect1" style="width:120px;" onChange="getCateData(2)"> -->
-<!-- 								<option value="0" selected>선택 없음</option> -->
-<!-- 							</select> -->
-<!-- 						</span> -->
-<!-- 						> -->
-<!-- 						<span id="eIssueCate2"> -->
-						
-<!-- 							<select id="eIssueSelect2" name="eIssueSelect2" style="width:120px;" onChange="getCateData(3)"> -->
-<!-- 								<option value="0" selected>선택 없음</option> -->
-<!-- 							</select> -->
-<!-- 						</span> -->
-<!-- 						> -->
-<!-- 						<span id="eIssueCate3"> -->
-<!-- 							<select id="eIssueSelect3" name="eIssueSelect3" style="width:120px;" onChange="getCateData(4)"> -->
-<!-- 								<option value="0" selected>선택 없음</option> -->
-<!-- 							</select> -->
-<!-- 						</span> -->
-<!-- 						> -->
-<!-- 						<span id="eIssueCate4"> -->
-<!-- 							<select id="eIssueSelect4" name="eIssueSelect4" style="width:120px;"> -->
-<!-- 								<option value="0" selected>선택 없음</option> -->
-<!-- 							</select> -->
-<!-- 						</span> -->
-
-<!--             		</td> -->
-					<th style="width: 15% !important;"><span style="color: red">* </span>자산유형</th>
-					<td style="width: 35% !important;" colspan="3">
+					<th ><span style="color: red">* </span>자산유형</th>
+					<td colspan="3" >
 						<input type="hidden" id="eAssetTypeName" name="eAssetTypeName" />
 						<select id='eAssetType' name='eAssetType'  onchange="selectName(this,'eAssetTypeName')" style="width:120px;" >
 							<option value=''>선택</option>
@@ -759,7 +743,6 @@
 					</td>
 				</tr>
 				<tr>
-					
 					<th><span style="color: red">* </span>처리유형</th>
 					<td  colspan="1"> 
 						<input type="hidden" id="eProcessingTypeName" name="eProcessingTypeName" />	

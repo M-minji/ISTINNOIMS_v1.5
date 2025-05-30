@@ -663,17 +663,30 @@
 			<h2>변경관리 수정 페이지</h2>
 		</div>
 	</div>
- 	<div class="normal_table row">
+	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
-  					<th>작성자</th>
-  					<td colspan="1"> ${info.kStaffName}</td>
-  					<th>작성일</th>
-  					<td >
-						<input type="text" id="blueprintWdate" name="blueprintWdate" style="width:120px;text-align: center;" class="inp_color" value="${info.blueprintWdate}"  readonly="readonly" />
+          		<tr>
+					<th >작성자</th>
+					<td >${info.kStaffName}
 					</td>
-  				</tr>
+					<th >등록일</th>
+					<td >
+						${info.blueprintWdate}
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+ 	<div class="normal_table row">
+		<table>
+			<colgroup> 
+			    	<col style="width: 12.7%;"/> 
+			        <col style="width: 37.3%;"/> 
+			        <col style="width: 12.7%;"/> 
+			        <col style="width: 37.3%;"/> 
+			    </colgroup>
+			<tbody>	
   				<tr>
 					<th>요청일자</th>
 					<td colspan="3"> 

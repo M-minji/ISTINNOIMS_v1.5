@@ -18,8 +18,10 @@ $(document).ready(function(){
 	datepickerIdSet("eReqDate");
 	datepickerIdSet("blueprintWdate");
 	eCheck();
-	$("#eReqDate").val(nowDate());
-	$("#blueprintWdate").val(nowDate());
+	const today = nowDate();
+	$("#eReqDate").val(today);
+	$("#blueprintWdateDisplay").text(today);
+	$("#blueprintWdate").val(today);
 	$('#oPass').prop('checked', true);
 	$("#oSignPass").val("Y");
 });
@@ -630,18 +632,31 @@ function approvalPop(){
 			<h2>변경 정보 등록</h2>
 		</div>
 	</div>
-			
+	<div class="normal_table row">
+		<table>
+			<tbody>
+          		<tr>
+					<th >작성자</th>
+					<td >${staffVo.kStaffName}
+					</td>
+					<th >등록일</th>
+					<td >
+						<input type="hidden" id="blueprintWdate" name="blueprintWdate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
+						<span id="blueprintWdateDisplay"></span>
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
 	<div class="normal_table  row">
 			<table>
+				<colgroup> 
+			    	<col style="width: 12.7%;"/> 
+			        <col style="width: 37.3%;"/> 
+			        <col style="width: 12.7%;"/> 
+			        <col style="width: 37.3%;"/> 
+			    </colgroup>
 				<tbody>
-  				<tr>
-  					<th>작성자</th>
-  					<td colspan="1"> ${staffVo.kStaffName}</td>
-  					<th>작성일</th>
-  					<td >
-						<input type="text" id="blueprintWdate" name="blueprintWdate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
-					</td>
-  				</tr>
   				<tr>
   					<th>요청일자</th>
 					<td colspan="3">
