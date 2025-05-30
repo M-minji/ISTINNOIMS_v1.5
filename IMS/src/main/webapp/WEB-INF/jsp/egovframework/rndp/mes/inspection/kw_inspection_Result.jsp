@@ -614,7 +614,7 @@
 			 		<tr> <td><a onclick="eDownload('${list.eFileID}','${list.eFileName}');">${list.eFileName}</a></td></tr>
 				 </c:forEach>
 			 	<c:if test="${empty eFileInfoList}">
-		 		<tr> <td>첨부된 파일이 없습니다.</td></tr>
+		 		<tr> <td>등록된 파일이 없습니다.</td></tr>
 		 		</c:if>
 			</tbody>
 		</table>

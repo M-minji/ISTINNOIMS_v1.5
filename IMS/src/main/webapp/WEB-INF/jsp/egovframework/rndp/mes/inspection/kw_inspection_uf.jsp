@@ -813,7 +813,7 @@ ${selInfo.eRemark}
 						 </c:forEach>
 					 </c:if>
 			 		<c:if test="${empty eFileInfoList}">
-			 		<tr> <td colspan="2">첨부된 파일이 없습니다.</td></tr>
+			 		<tr> <td colspan="2">등록된 파일이 없습니다.</td></tr>
 			 		</c:if>
 			</tbody>
 		</table>

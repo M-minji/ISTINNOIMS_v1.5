@@ -666,8 +666,8 @@
 						<input type="hidden" name="eAuthor" id="eAuthor" style="width:35%; text-align:left;"   value="${assetInfo.kStaffName}" class="inp_color"/>
             		</td>
             		<th>등록일</th>
-            		<td>
-						<input type="text" id="aAssetDate" name="aAssetDate" style="width:150px; text-align:center;" class="inp_color" readonly value="${assetInfo.eAssetWdate }" />
+            		<td>${assetInfo.eAssetWdate }
+						<input type="hidden" id="aAssetDate" name="aAssetDate" style="width:150px; text-align:center;" class="inp_color" readonly value="${assetInfo.eAssetWdate }" />
             		</td>
           		</tr>			
 			</tbody>

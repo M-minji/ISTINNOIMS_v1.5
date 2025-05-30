@@ -472,18 +472,30 @@ $(document).ready(function(){
 			<h2>SR관리 정보 수정 페이지</h2>
 		</div>
 	</div>
-
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
-  					<th>작성자</th>
-  					<td colspan="1"> ${info.kStaffName}</td>
-  					<th>작성일</th>
-					<td colspan="1"> 
-						<input type="text" name="blueprintWdate" id="blueprintWdate" style="width:150px; text-align:center;" class="inp_color" readonly  value="${info.blueprintWdate }" />
-  					</td>
-  				</tr>
+          		<tr>
+					<th >작성자</th>
+					<td >${info.kStaffName}
+					</td>
+					<th >등록일</th>
+					<td >${info.blueprintWdate }
+						<input type="hidden" id="blueprintWdate" name="blueprintWdate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
+			<tbody>
 			 	<tr>
 	  				<th>요청일자</th>
 					<td colspan="3"> 
@@ -491,7 +503,7 @@ $(document).ready(function(){
 					</td>
 				</tr>
   				<tr>
-	  				<th>요청자*</th>
+	  				<th><span style="color: red">* </span>요청자</th>
 					<td>
 						<input type="text" id="eRequester" name="eRequester" style="width:70%;" value="${info.eRequester}" maxLength="50"/>
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eRequester')">담당자 선택</a>
@@ -577,7 +589,7 @@ $(document).ready(function(){
 						 </c:forEach>
 					 </c:if>
 			 		<c:if test="${empty eFileInfoList}">
-			 		<tr> <td colspan="2">첨부된 파일이 없습니다.</td></tr>
+			 		<tr> <td colspan="2">등록된 파일이 없습니다.</td></tr>
 			 		</c:if>
 			</tbody>
 		</table>

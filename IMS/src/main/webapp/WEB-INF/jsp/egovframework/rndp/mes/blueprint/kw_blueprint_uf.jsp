@@ -680,12 +680,12 @@
 	</div>
  	<div class="normal_table row">
 		<table>
-			<colgroup> 
-			    	<col style="width: 12.7%;"/> 
-			        <col style="width: 37.3%;"/> 
-			        <col style="width: 12.7%;"/> 
-			        <col style="width: 37.3%;"/> 
-			    </colgroup>
+			<colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
 			<tbody>	
   				<tr>
 					<th>요청일자</th>
@@ -814,7 +814,7 @@
 			
 				<c:if test="${empty aDeteliList }">
 					<tr>
-						<td colspan="6">등록된 상세 내역이 없습니다.</td>
+						<td colspan="6">상세내역을 추가 하여 정보를 입력하세요.</td>
 					</tr>
 				</c:if>
 			</tbody>
@@ -873,7 +873,7 @@
 			
 				<c:if test="${empty assetList}">
 					<tr>
-						<td colspan="10">등록된 장비 정보가 없습니다.</td>
+						<td colspan="10">장비를 선택하세요.</td>
 					</tr>
 				</c:if>
 			</tbody>

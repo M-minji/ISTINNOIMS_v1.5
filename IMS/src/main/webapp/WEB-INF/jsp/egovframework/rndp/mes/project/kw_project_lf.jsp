@@ -299,7 +299,7 @@ function excelDwonload(){
 				<tr>
 			    	<th >NO.</th>
 			    	<th >작성자</th>
-			    	<th >작성일</th>
+			    	<th >등록일</th>
 			    	<th >사업명</th>
 			    	<th >사업기간</th>
 			    	<th >담당자</th>

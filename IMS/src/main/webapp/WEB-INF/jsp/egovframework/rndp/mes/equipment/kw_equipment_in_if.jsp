@@ -12,8 +12,10 @@
 	$(document).ready(function(){
 		datepickerIdSet("eEntryImportDate");
 		datepickerIdSet("eEntryWdate");
-		$('#eEntryImportDate').val(nowDate());
-		$('#eEntryWdate').val(nowDate());
+		const today = nowDate();
+		$('#eEntryWdateDisplay').text(today);
+		$('#eEntryImportDate').val(today);
+		$('#eEntryWdate').val(today);
 		
 		 $('#oPass').prop('checked', true);
 		 $("#oSignPass").val("Y");
@@ -447,18 +449,31 @@
 			<h2>반입 정보 등록</h2>
 		</div>
 	</div>
-	
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
-  					<th>작성자</th>
-  					<td colspan="1"> ${staffVO.kStaffName}</td>
-  					<th>작성일</th>
-  					<td colspan="1"> 
-						<input type="text" name="eEntryWdate" id="eEntryWdate" style="width:150px; text-align:center;" class="inp_color" readonly  value="" />
-  					</td>
-  				</tr>
+          		<tr>
+					<th >작성자</th>
+					<td >${staffVO.kStaffName}
+					</td>
+					<th >등록일</th>
+					<td >
+						<input type="hidden" id="eEntryWdate" name="eEntryWdate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
+						<span id="eEntryWdateDisplay"></span>
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
+			<tbody>
 				<tr>
 					<th><span style="color: red">* </span>반입일</th>
 					<td colspan="3">

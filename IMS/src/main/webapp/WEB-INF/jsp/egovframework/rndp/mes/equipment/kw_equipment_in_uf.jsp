@@ -632,17 +632,30 @@
 			<h2>임시장비 반입정보 수정</h2>
 		</div>
 	</div>
-	
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
-            		<th>작성자</th>
-           			<td>${info.kStaffName }</td>
-            		
-           			<th>작성일</th>
-           			<td><input type="text" name="eEntryWdate" id="eEntryWdate" style="width:150px; text-align:center;" class="inp_color" readonly  value="${info.eEntryWdate }" /></td>
-       			</tr>	
+          		<tr>
+					<th >작성자</th>
+					<td >${info.kStaffName}
+					</td>
+					<th >등록일</th>
+					<td >${info.eEntryWdate }
+						<input type="hidden" id="eEntryWdate" name="eEntryWdate" style="width:120px;text-align: center;" class="inp_color" value="${info.eEntryWdate }" readonly="readonly" />
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<colgroup>
+				<col style="width: 200px;"/>
+				<col />
+				<col style="width: 200px;"/>
+				<col />
+			</colgroup>
+			<tbody>
 				<tr>
 					<th><span style="color: red">* </span>반입일</th>
 					<td colspan="3">
