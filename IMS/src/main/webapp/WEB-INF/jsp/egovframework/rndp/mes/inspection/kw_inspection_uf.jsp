@@ -705,21 +705,26 @@
 			<h2>점검 정보 수정 페이지</h2>
 		</div>
 	</div>
-	
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
+          		<tr>
 					<th >작성자</th>
 					<td >${selInfo.eRegistrant}
 						<input type="hidden" id="eRegistrant" name="eRegistrant"  value="${selInfo.eRegistrant}" maxlength="50"/>
 						<input type="hidden" id="eStaffKey" name="eStaffKey"  value="${selInfo.eStaffKey}" maxlength="50"/>
 					</td>
-					<th >작성일</th>
-					<td >
-						<input type="text" id="eRegistrationDate" name="eRegistrationDate" style="width:120px;text-align: center;" class="inp_color"  value="${selInfo.eRegistrationDate}" readonly="readonly" />
+					<th >등록일</th>
+					<td >${selInfo.eRegistrationDate}
+						<input type="hidden" id="eRegistrationDate" name="eRegistrationDate" style="width:120px;text-align: center;" class="inp_color"  value="${selInfo.eRegistrationDate}"  readonly="readonly" />
 					</td>
-  				</tr>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<tbody>
 				<tr>
 					<th><span style="color: red">* </span>점검구분</th>
 					<td> 

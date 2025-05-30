@@ -313,18 +313,30 @@
 			<h2>문제관리 상세</h2>
 		</div>
 	</div>
-
 	<div class="normal_table row">
 		<table>
 			<tbody>
-				<tr>
-  					<th>작성자</th>
-  					<td colspan="1"> ${info.kStaffName}</td>
-  					<th>작성일</th>
-  					<td colspan="1">${info.blueprintWdate}
+          		<tr>
+					<th >작성자</th>
+					<td >${info.kStaffName}
+					</td>
+					<th >등록일</th>
+					<td >${info.blueprintWdate}
 						<input type="hidden" name="blueprintWdate" id="blueprintWdate" style="width:150px; text-align:center;" class="inp_color" readonly  value="${info.blueprintWdate }" />
-  					</td>
-  				</tr>
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<colgroup> 
+			    	<col style="width: 12.7%;"/> 
+			        <col style="width: 37.3%;"/> 
+			        <col style="width: 12.7%;"/> 
+			        <col style="width: 37.3%;"/> 
+			    </colgroup>
+			<tbody>
   				<tr>
 	  				 
 					<th>요청일자</th>
@@ -398,7 +410,7 @@
 			<thead>
 				<tr>
 <!-- 					<th style="width: 8%;">구분</th> -->
-					<th style="width: 18%;">회의참여자*</th>
+					<th style="width: 18%;">회의참여자</th>
 					<th style="width: 18%;">참여자소속</th>
 					<th style="width: 18%;">역할</th>
 					<th style="width: 18%;">연락처</th>
@@ -456,7 +468,7 @@
 			<thead>
 				<tr>
 <!-- 					<th style="width: 8%;">구분</th> -->
-					<th style="width: 12%;">작업자*</th>
+					<th style="width: 12%;">작업자</th>
 					<th style="width: 12%;">작업자소속</th>
 					<th style="width: 12%;">작업일시</th>
 					<th style="width: *;">내용</th>

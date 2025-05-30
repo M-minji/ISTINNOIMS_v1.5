@@ -14,8 +14,10 @@
 $(document).ready(function(){
 	datepickerIdSet("eReqDate");
 	datepickerIdSet("blueprintWdate");
-	$("#eReqDate").val(nowDate());
-	$("#blueprintWdate").val(nowDate());
+	const today = nowDate();
+	$('#blueprintWdateDisplay').text(today);
+	$("#eReqDate").val(today);
+	$("#blueprintWdate").val(today);
 	$('#oPass').prop('checked', true);
 	$("#oSignPass").val("Y");
 	
@@ -710,18 +712,31 @@ function approvalPop(){
 			<h2>문제 정보 등록</h2>
 		</div>
 	</div>
-		
 	<div class="normal_table row">
 		<table>
 			<tbody>
-  				<tr>
-  					<th>작성자</th>
-  					<td colspan="1"> ${staffVo.kStaffName}</td>
-  					<th>작성일</th>
-					<td>
-						<input type="text" id="blueprintWdate" name="blueprintWdate" style="width:150px; text-align:center;" class="inp_color" readonly   />
+          		<tr>
+					<th >작성자</th>
+					<td >${staffVo.kStaffName}
 					</td>
-  				</tr>
+					<th >등록일</th>
+					<td >
+						<input type="hidden" id="blueprintWdate" name="blueprintWdate" style="width:120px;text-align: center;" class="inp_color"  readonly="readonly" />
+						<span id="blueprintWdateDisplay"></span>
+					</td>
+  				</tr>		
+			</tbody>
+		</table>
+	</div>
+	<div class="normal_table row">
+		<table>
+			<colgroup> 
+			    	<col style="width: 12.7%;"/> 
+			        <col style="width: 37.3%;"/> 
+			        <col style="width: 12.7%;"/> 
+			        <col style="width: 37.3%;"/> 
+			    </colgroup>
+			<tbody>
   				<tr>
   					<th>요청일자</th>
 					<td colspan="3">
@@ -730,7 +745,7 @@ function approvalPop(){
 				</tr>
   				 
   				<tr>
-	  				<th>요청자*</th>
+	  				<th><span style="color: red">* </span>요청자</th>
 					<td>
 						<input type="text" id="eRequester" name="eRequester" style="width:70%;" maxLength="50" />
 						<a class="form_btn bg" onclick="selectWorkerPop('R', 'eRequester')" >담당자 선택</a>
@@ -782,7 +797,7 @@ function approvalPop(){
 			<h2>회의록  정보</h2>
 		</div>
 		<div class="btns">
-			 <button type="button" class="form_btn md" onclick="addNotesList()">행추가</button>
+			 <button type="button" class="form_btn md" onclick="addNotesList()">회의록 추가</button>
 		</div>
 	</div>
 	<div class="normal_table" id="viewDiv2">
@@ -790,7 +805,7 @@ function approvalPop(){
 			<thead>
 				<tr>
 					<th style="width: 8%;">구분</th>
-					<th style="width: 18%;">회의참여자*</th>
+					<th style="width: 18%;"><span style="color: red">* </span>회의참여자</th>
 					<th style="width: 18%;">참여자소속</th>
 					<th style="width: 18%;">역할</th>
 					<th style="width: 18%;">연락처</th>
@@ -799,7 +814,7 @@ function approvalPop(){
 			</thead>
 			<tbody id="lineRowThr">
 				<tr>
-					<td colspan="6">행 추가 하여 정보를 입력하세요.</td>
+					<td colspan="6">회의록을 추가 하여 정보를 입력하세요.</td>
 				</tr>
 			</tbody>
 		</table>
@@ -810,7 +825,7 @@ function approvalPop(){
 			<h2>상세 내역 정보</h2>
 		</div>
 		<div class="btns">
-			 <button type="button" class="form_btn md" onclick="add_row()">행추가</button>
+			 <button type="button" class="form_btn md" onclick="add_row()">내역 추가</button>
 		</div>
 	</div>
 	<div class="normal_table" id="viewDiv2">
@@ -818,7 +833,7 @@ function approvalPop(){
 			<thead>
 				<tr>
 					<th style="width: 8%;">구분</th>
-					<th style="width: 12%;">작업자*</th>
+					<th style="width: 12%;"><span style="color: red">* </span>작업자</th>
 					<th style="width: 12%;">작업자소속</th>
 					<th style="width: 12%;">작업일시</th>
 					<th style="width: *;">내용</th>
@@ -827,7 +842,7 @@ function approvalPop(){
 			</thead>
 			<tbody id="lineRowTwo">
 				<tr>
-					<td colspan="6">행 추가 하여 정보를 입력하세요.</td>
+					<td colspan="6">상세내역을 추가 하여 정보를 입력하세요.</td>
 				</tr>
 			</tbody>
 		</table>
