@@ -189,7 +189,7 @@ function moveDetail(url){
 												<td>${list.eRequestDate}</td>
 										</tr>
 									</c:forEach>
-									 <c:forEach var="i" begin="${fn:length(mainIssueList) + 1}" end="10">
+									 <c:forEach var="i" begin="${fn:length(mainIssueList) + 1}" end="8">
 									      <tr>
 									        <td>${i}</td>
 									        <td>-</td>

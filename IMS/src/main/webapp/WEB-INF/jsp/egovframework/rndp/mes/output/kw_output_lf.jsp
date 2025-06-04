@@ -45,7 +45,7 @@ $(document).ready(function(){
 			        'text-overflow': 'ellipsis'  // 텍스트가 넘칠 경우 '...'로 표시
 			    });
 			});
-	  $('table[role="grid"].gridjs-table th:nth-child(3)').css('width', '150px'); //     <th >사업기간</th>   
+	  $('table[role="grid"].gridjs-table th:nth-child(3)').css('width', '155px'); //     <th >사업기간</th>   
 	  $('table[role="grid"].gridjs-table th:nth-child(4)').css("width", "135px"); //    <th >담당자</th>    산출물
 	  $('table[role="grid"].gridjs-table td:nth-child(4)').each(function() {
 			 // nowrap을 적용하여 줄내림 방지, overflow는 숨기기
@@ -240,7 +240,7 @@ function eReport_update(eProjectNum){
 					</li>
 					<li>
 		           		<span>사업시행연도</span>
-			       		<input type="text" id="eStartDate" name="eStartDate" class="inp_color" value="${mesOutputVO.eStartDate}" readonly />
+			       		<input type="text" id="eStartDate" name="eStartDate" class="inp_color" style="width:100px;" value="${mesOutputVO.eStartDate}" readonly />
 	<%-- 		           	~ <input type="text" id="eEndDate" name="eEndDate" class="inp_color"  style="width:100px; text-align: center;" value="${mesOutputVO.eEndDate}" readonly /> --%>
 					</li>
 					<li>
@@ -293,7 +293,7 @@ function eReport_update(eProjectNum){
  							<c:out value="${outputList.eProjectName}" />
  						</td> 
  						<td style="text-align:left;"> 
- 							${outputList.eStartDate}~${outputList.eEndDate}
+ 							${outputList.eStartDate} - ${outputList.eEndDate}
  						</td> 
 						<td onclick="event.cancelBubble = true;"> 
 							<c:if test="${outputList.sSignStatus eq '제외' || outputList.sSignStatus eq '승인' || outputList.sSignStatus eq '반려'}">결재 ${outputList.sSignStatus}:</c:if>

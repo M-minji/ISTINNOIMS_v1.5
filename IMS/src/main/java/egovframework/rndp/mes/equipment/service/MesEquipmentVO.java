@@ -74,8 +74,14 @@ public class MesEquipmentVO extends DefultVO{
 	private String eEntryWdate = "";
 	private String eViewGubun = "";
 	
+	private String viewDetail				= "";
 	
-	
+	public String getviewDetail() {
+		return viewDetail;
+	}
+	public void setviewDetail(String viewDetail) {
+		this.viewDetail = viewDetail;
+	}
 	public String geteViewGubun() {
 		return eViewGubun;
 	}

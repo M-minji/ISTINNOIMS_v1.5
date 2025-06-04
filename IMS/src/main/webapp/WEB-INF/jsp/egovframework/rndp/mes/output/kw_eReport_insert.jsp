@@ -372,7 +372,7 @@ function eDownloadAll(fileGubun){
 						<input type="hidden" id="eProjectName" name="eProjectName" style="width:90%; text-align: left;padding-left: 5px;"  value="" maxlength="50"/>
 					</td>
 					<th>사업기간</th>
-					<td>${projectInfo.eStartDate}~${projectInfo.eEndDate}
+					<td>${projectInfo.eStartDate} - ${projectInfo.eEndDate}
 						<input type="hidden" class="inp_color" id="eStartDate" name="eStartDate" style="width:100px;text-align: center;" value="" readonly /> 
 						<input type="hidden" class="inp_color" id="eEndDate" name="eEndDate" style="width:100px;text-align: center;" value="" readonly />
 					</td>

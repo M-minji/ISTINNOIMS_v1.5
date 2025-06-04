@@ -210,7 +210,7 @@ function nowDate(){
 				    	<span>기간</span>
 				    	<div class="date">
 				    		<input type="text" name="eTopStartDate" id="eTopStartDate" value="${staffVo.eTopStartDate}"  readonly/>
-	         			 	~<input type="text" name="eTopEndDate" id="eTopEndDate" value="${staffVo.eTopEndDate}"  readonly/>
+	         			 	-<input type="text" name="eTopEndDate" id="eTopEndDate" value="${staffVo.eTopEndDate}"  readonly/>
 				    	</div>
 	    			</li>
 				</ul>

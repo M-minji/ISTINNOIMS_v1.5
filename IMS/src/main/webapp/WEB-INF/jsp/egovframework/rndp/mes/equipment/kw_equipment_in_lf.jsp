@@ -17,6 +17,9 @@
 function fn_guestList(pageNo) {
 	$('#mloader').show();
 	document.listForm.pageIndex.value = pageNo;
+	if ($("#viewDetail").val() === "Y") {
+		document.listForm.viewDetail.value = "Y";
+    }
 	document.listForm.action = "/mes/equipment/kw_equipment_in_lf.do";
 	document.listForm.submit();
 }
@@ -158,7 +161,9 @@ function eImport_go(eEquipmentItemKey){
 
 $(document).ready(function() {
 	datepickerSet("eTopStartDate","eTopEndDate");
- 
+	if ($("#viewDetail").val() === "Y") {
+        $("#search_detail").css("display", "flex");
+    }
  $(".clear-input").click(function() {
      var targetId = $(this).data("target");
      $("#" + targetId).val("");
@@ -211,7 +216,7 @@ function excelDwonload(){
 	<input type="hidden" id="pageIndex" name="pageIndex" value="${mesEquipmentVO.pageIndex}"/>
 	<input type="hidden" id="eEquipmentInKey" name="eEquipmentInKey" value="" />
 	<input type="hidden" id="eStatus" name="eStatus" value="" />
-	
+	<input type="hidden" id="viewDetail" name="viewDetail" value="${mesEquipmentVO.viewDetail}" />
 	<div class="content_top">
 		<div class="content_tit">
 			<h2>임시장비 반입출 관리</h2>
@@ -235,7 +240,7 @@ function excelDwonload(){
 						<span>반입 일자</span>
 						<div class="date">
 							<input type="text" id="eTopStartDate" name="eTopStartDate" value="${mesEquipmentVO.eTopStartDate}" readonly />
-				           	~ <input type="text" id="eTopEndDate" name="eTopEndDate" value="${mesEquipmentVO.eTopEndDate}" readonly />
+				           	- <input type="text" id="eTopEndDate" name="eTopEndDate" style="padding-left:2px;" value="${mesEquipmentVO.eTopEndDate}" readonly />
 						</div>
 					</li>
 				</ul>

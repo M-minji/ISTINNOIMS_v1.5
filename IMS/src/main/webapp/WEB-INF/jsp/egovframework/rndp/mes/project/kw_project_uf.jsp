@@ -279,7 +279,7 @@ function deleteGyeoljaeList(){
 					</td>
 					<th>사업기간</th>
 					<td>
-						<input type="text" class="inp_color" id="eStartDate" name="eStartDate" style="width:100px;text-align: center;" value="${projectInfo.eStartDate}" readonly /> ~
+						<input type="text" class="inp_color" id="eStartDate" name="eStartDate" style="width:100px;text-align: center;" value="${projectInfo.eStartDate}" readonly /> -
 						<input type="text" class="inp_color" id="eEndDate" name="eEndDate" style="width:100px;text-align: center;" value="${projectInfo.eEndDate}" readonly />
 					</td>
 					<th>주사업자</th>

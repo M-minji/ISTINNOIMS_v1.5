@@ -185,7 +185,7 @@ function rowCheck(index){
 				<li>
 					 <span>요청일자</span>
 		       		<input type="text" name="topStartDate" id="topStartDate" value="${mesMaintanceVO.topStartDate}" style="width:100px;text-align: center;" readonly  class="inp_color"/>
-		           	~ <input type="text" name="topEndDate" id="topEndDate" value="${mesMaintanceVO.topEndDate}" style="width:100px;text-align: center;" readonly class="inp_color" />
+		           	- <input type="text" name="topEndDate" id="topEndDate" value="${mesMaintanceVO.topEndDate}" style="padding-left:2px; width:100px;text-align: center;" readonly class="inp_color" />
 		     	</li>
 				<li>	
 		     		<a onclick="fn_guestList(1)">검색</a>

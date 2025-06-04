@@ -292,22 +292,22 @@ function selectRow(key) {
 									<td>
 										${list.eVersion}
 									</td>
-									<td style="text-align: center; ">
+									<td>
 										${list.ePurchaseDate}
 									</td>
-									<td style="text-align: center; ">
+									<td>
 										${list.eStartDate}
 									</td>
-									<td style="text-align: center; ">
+									<td>
 										${list.eEndDate}
 									</td>
 									<td>
 										${list.eValidityPeriod}
 									</td>
-									<td style="text-align: center; padding-right:5px;">
+									<td style="padding-right:5px;">
 										${list.eLicenseQuantity}
 									</td>
-									<td style="text-align: center; padding-right:5px;">
+									<td style="padding-right:5px;">
 										${list.eUsedLicenseQuantity}
 									</td>
 									<td>

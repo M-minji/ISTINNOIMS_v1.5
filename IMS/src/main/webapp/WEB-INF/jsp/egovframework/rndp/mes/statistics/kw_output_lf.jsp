@@ -153,7 +153,7 @@
 		           		<span>사업기간기간 </span>
 		           		<div class="date">
 		           			<input type="text" class='inp_color' name="topStartDate" style="width:120px; text-align:center;" id="topStartDate" value="${mesStatisticsVO.topStartDate}" readonly/>
-				       		~
+				       		-
 				           	<input type="text" class='inp_color' name="topEndDate" style="width:120px; text-align:center;"  id="topEndDate"  value="${mesStatisticsVO.topEndDate}" readonly/>
 		           		</div>
 					</li>

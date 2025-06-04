@@ -204,7 +204,7 @@ function excelDwonload(){
 		           		<span>요청일자</span>
 		           		<div class="date">
 				       		<input type="text" id="topStartDate" name="topStartDate" value="${mesBlueprintVO.topStartDate}" readonly />
-				           	~ <input type="text" id="topEndDate" name="topEndDate" value="${mesBlueprintVO.topEndDate}" readonly />
+				           	- <input type="text" id="topEndDate" name="topEndDate" style="padding-left:2px;" value="${mesBlueprintVO.topEndDate}" readonly />
 				        </div>
 					</li>
 		    	</ul>

@@ -93,6 +93,7 @@ public class MesAssetController {
 		paginationInfo.setRecordCountPerPage(mesAssetVO.getRecordCountPerPage());
 		paginationInfo.setPageSize(mesAssetVO.getPageSize());
 		
+		
 		mesAssetVO.setFirstIndex(paginationInfo.getFirstRecordIndex());
 		mesAssetVO.setLastIndex(paginationInfo.getLastRecordIndex());
 		mesAssetVO.setRecordCountPerPage(paginationInfo.getRecordCountPerPage());

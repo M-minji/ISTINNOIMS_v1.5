@@ -277,7 +277,7 @@
 		innerStr += "		<td><span id='rowDate_"+rowIndex+"'></span>"; //유효기간
 		innerStr += "		</td>";
 		innerStr += "		<td>"; 
-		innerStr +=	"			<input type='text' id='eLicenseQuantity_"+rowIndex+"' name='eLicenseQuantity' value='' style='width:98%; text-align:right;' maxLength='6' onkeyup=\"this.value=this.value.replace(/[^0-9]/g,'')\"  />";
+		innerStr +=	"			<input type='text' id='eLicenseQuantity_"+rowIndex+"' name='eLicenseQuantity' value='' style='width:98%; text-align:left;' maxLength='6' onkeyup=\"this.value=this.value.replace(/[^0-9]/g,'')\"  />";
 		innerStr += "		</td>";
 		
 //		innerStr += "		<td>"; 

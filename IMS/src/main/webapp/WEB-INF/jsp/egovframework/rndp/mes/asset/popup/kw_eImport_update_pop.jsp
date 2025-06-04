@@ -45,7 +45,7 @@ function mesIMGregInsert() {
 	<div class="pop_head">
 		<div id="pop_head">
 			<div class="tit">
-				<h3>반입정보 등록 </h3>
+				<h3>보유자산 반입 등록 </h3>
 			</div>
 			<a href="javascript:self.close();">
 				<img src="/images/btn/close.gif" width="22" height="21">
@@ -59,12 +59,12 @@ function mesIMGregInsert() {
 				<table>
 				  <tbody>
 						<tr>
-							<th>반입 일자*</th>
+							<th>반입 일자</th>
 			      			<td>
 			      				<input type="hidden" name='eEntryExitItemKey' id='eEntryExitItemKey' value='${mesAssetVO.eEntryExitItemKey }'> 
 			      				<input type="text" name='eEntryImportDate' id='eEntryImportDate' value='' style="width:120px; text-align:center;" class="inp_color"   value=""  readonly="readonly">   
 			      			</td>
-			      			<th>반입 확인자*</th>
+			      			<th>반입 확인자</th>
 			      			<td>
 			      				<input type="text" name='eEntryImporter' id='eEntryImporter' value='' maxlength="30">  
 			      			</td>
