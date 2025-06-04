@@ -163,7 +163,7 @@
 		           		<span>기간 </span>
 		           		<div class="date">
 				       		<input type="text" class='inp_color' name="topStartDate" id="topStartDate" value="${mesStatisticsVO.topStartDate}" readonly/>
-				       		~
+				       		-
 				           	<input type="text" class='inp_color' name="topEndDate"  id="topEndDate"  value="${mesStatisticsVO.topEndDate}" readonly/>
 				        </div>
 					</li>

@@ -250,7 +250,7 @@ function excelDwonload(){
 						<span>점검일자</span>
 						<div class="date">
 							<input type="text" id="eTopStartDate" name="eTopStartDate" value="${mesInspectionVO.eTopStartDate}" readonly />
-				           	~ <input type="text" id="eTopEndDate" name="eTopEndDate" value="${mesInspectionVO.eTopEndDate}" readonly />
+				           	- <input type="text" id="eTopEndDate" name="eTopEndDate" style="padding-left:2px;" value="${mesInspectionVO.eTopEndDate}" readonly />
 				        </div>
 					</li>
 				</ul>

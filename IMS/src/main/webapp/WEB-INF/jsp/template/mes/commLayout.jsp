@@ -482,6 +482,8 @@ function fn_search_detail(){
                 viewGubun.val("Y");
             }
     }
+    var viewDetail = $("#viewDetail");
+    viewDetail.val(viewDetail.val() === "Y" ? "N" : "Y");
 
     // 기본 동작 유지
     if($("#search_detail").is(":visible")){

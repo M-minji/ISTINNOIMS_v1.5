@@ -84,7 +84,7 @@ function excelDown(){
 				<li>
 	           		<span>시작시간</span> 
 		       		<input type="text" id="topStartDate" name="topStartDate" style="width:100px;" value="${logVO.topStartDate}" readonly />
-		           	~ <input type="text" id="topEndDate" name="topEndDate" style="width:100px;" value="${logVO.topEndDate}" readonly />
+		           	- <input type="text" id="topEndDate" name="topEndDate" style="padding-left:2px; width:100px;" value="${logVO.topEndDate}" readonly />
 				</li>
 				<li>	
 					<a style="cursor: pointer;" onclick="setStartDate(7);">

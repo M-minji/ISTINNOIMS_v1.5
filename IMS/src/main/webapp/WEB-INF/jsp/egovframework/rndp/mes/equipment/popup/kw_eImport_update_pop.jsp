@@ -57,7 +57,7 @@ function nowDate(){
 	<div class="pop_head">
 		<div id="pop_head">
 			<div class="tit">
-				<h3>임시자산 반출 등록 POP</h3>
+				<h3>임시자산 반출 등록</h3>
 			</div>
 			<a href="javascript:self.close();">
 				<img src="/images/btn/close.gif" width="22" height="21">
@@ -71,12 +71,12 @@ function nowDate(){
 				<table>
 				  <tbody>
 						<tr>
-							<th>반출 일자*</th>
+							<th>반출 일자</th>
 			      			<td>
 			      				<input type="hidden" name='eEquipmentItemKey' id='eEquipmentItemKey' value='${mesEquipmentVO.eEquipmentItemKey }'> 
 			      				<input type="text" name='eEntryExporterDate' id='eEntryExporterDate' value='' style="width:120px; text-align:center;" class="inp_color"   value=""  readonly="readonly">   
 			      			</td>
-			      			<th>반출 확인자*</th>
+			      			<th>반출 확인자</th>
 			      			<td>
 			      				<input type="text" name='eExitExporter' id='eExitExporter' value='' maxlength="30">  
 			      			</td>

@@ -15,6 +15,9 @@
 function fn_guestList(pageNo) {
 	$('#mloader').show();
 	document.listForm.pageIndex.value = pageNo;
+	if ($("#viewDetail").val() === "Y") {
+		document.listForm.viewDetail.value = "Y";
+    }
 	document.listForm.action = "/mes/asset/kw_asset_lf.do";
 	document.listForm.submit();
 }
@@ -516,6 +519,11 @@ function readExcel(e) {
 }
 
 $(document).ready(function() {
+	
+	if ($("#viewDetail").val() === "Y") {
+        $("#search_detail").css("display", "flex");
+    }
+	
 
 	$('#searchTypeSet1 option').each(function () {
 	     const dataname = $(this).data('value2');  
@@ -768,6 +776,7 @@ function excelDwonload(){
 	<input type="hidden" id="pageIndex" name="pageIndex" value="${mesAssetVO.pageIndex}"/>
 	<input type="hidden" id="eAssetKey" name="eAssetKey" value="" />
 	<input type="hidden" id="sSignStatus" name="sSignStatus" value="" />
+	<input type="hidden" id="viewDetail" name="viewDetail" value="${mesAssetVO.viewDetail}" />
 	
 	<div class="content_top">
 		<div class="content_tit">

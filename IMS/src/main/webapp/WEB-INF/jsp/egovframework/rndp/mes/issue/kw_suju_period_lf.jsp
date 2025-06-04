@@ -78,7 +78,7 @@ function setStartDate(d) {
 		     	<li>
 	           		<span>수주일자</span>
 		       		<input type="text" name="topStartDate" id="topStartDate" value="${mesSujuVO.topStartDate}" style="width:100px;" readonly />
-		           	~ <input type="text" name="topEndDate" id="topEndDate" value="${mesSujuVO.topEndDate}" style="width:100px;" readonly />
+		           	- <input type="text" name="topEndDate" id="topEndDate" style="padding-left:2px;" value="${mesSujuVO.topEndDate}" style="width:100px;" readonly />
 		     	</li>
 		    	<li>	
 					<a style="cursor: pointer;" onclick="setStartDate(7)">

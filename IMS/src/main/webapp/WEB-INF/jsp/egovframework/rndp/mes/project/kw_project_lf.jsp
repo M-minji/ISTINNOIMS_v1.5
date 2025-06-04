@@ -50,7 +50,7 @@ $(document).ready(function(){
 		        'text-overflow': 'ellipsis'  // 텍스트가 넘칠 경우 '...'로 표시
 		    });
 		});
-	  $('table[role="grid"].gridjs-table th:nth-child(5)').css('width', '180px'); //     	<th >사업기간</th>
+	  $('table[role="grid"].gridjs-table th:nth-child(5)').css('width', '190px'); //     	<th >사업기간</th>
 	  $('table[role="grid"].gridjs-table th:nth-child(6)').css('width', '100px'); //    	<th >담당자</th>
 	  $('table[role="grid"].gridjs-table td:nth-child(6)').each(function() {
 			 // nowrap을 적용하여 줄내림 방지, overflow는 숨기기
@@ -269,7 +269,7 @@ function excelDwonload(){
 					</li>
 					<li>
 		           		<span>사업시행연도</span>
-			       		<input type="text" id="eStartDate" name="eStartDate" class="inp_color"  value="${mesProjectVO.eStartDate}" readonly />
+			       		<input type="text" id="eStartDate" name="eStartDate" style="width:100px;" class="inp_color"  value="${mesProjectVO.eStartDate}" readonly />
 	<%-- 		           	~ <input type="text" id="eEndDate" name="eEndDate" class="inp_color"  style="width:100px;text-align: center;" value="${mesProjectVO.eEndDate}" readonly /> --%>
 					</li>
 					<li>
@@ -331,7 +331,7 @@ function excelDwonload(){
  							<c:out value="${projectList.eProjectName}" />
  						</td> 
  						<td style="text-align:left;"> 
- 							${projectList.eStartDate}~${projectList.eEndDate}
+ 							${projectList.eStartDate} - ${projectList.eEndDate}
  						</td> 
  						<td style="text-align:left;"> 
  							<c:out value="${projectList.eManager}" /> 

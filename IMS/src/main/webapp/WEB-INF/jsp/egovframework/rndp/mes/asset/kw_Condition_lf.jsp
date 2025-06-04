@@ -42,6 +42,9 @@ $(function(){
 function fn_guestList(pageNo) {
 	$('#mloader').show();
 	document.listForm.pageIndex.value = pageNo;
+	if ($("#viewDetail").val() === "Y") {
+		document.listForm.viewDetail.value = "Y";
+    }
 	document.listForm.action = "/mes/asset/kw_eCondition_lf.do";
 	document.listForm.submit();
 }
@@ -167,7 +170,9 @@ function formatDateData(date) {
 
 
 $(document).ready(function() {
- 
+	if ($("#viewDetail").val() === "Y") {
+        $("#search_detail").css("display", "flex");
+    }
  $(".clear-input").click(function() {
      var targetId = $(this).data("target");
      $("#" + targetId).val("");
@@ -216,6 +221,7 @@ function excelDwonload(){
 	<input type="hidden" id="pageIndex" name="pageIndex" value="${mesAssetVO.pageIndex}"/>
 	<input type="hidden" id="eEntryExitKey" name="eEntryExitKey" value="" />
 	<input type="hidden" id="eStatus" name="eStatus" value="" />
+	<input type="hidden" id="viewDetail" name="viewDetail" value="${mesAssetVO.viewDetail}" />
 	<div class="content_top">
 		<div class="content_tit">
 			<h2>보유자산 반출입 관리</h2>
@@ -243,7 +249,7 @@ function excelDwonload(){
 						<span>반출일</span>
 						<div class="date">
 							<input type="text" id="topStartDate" name="topStartDate" value="${mesAssetVO.topStartDate}" readonly />
-				           	~ <input type="text" id="topEndDate" name="topEndDate" value="${mesAssetVO.topEndDate}" readonly />
+				           	- <input type="text" id="topEndDate" name="topEndDate" style="padding-left:2px;" value="${mesAssetVO.topEndDate}" readonly />
 			           	</div>						
 					</li>
 				</ul>

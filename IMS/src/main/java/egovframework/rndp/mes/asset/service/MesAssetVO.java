@@ -86,6 +86,8 @@ public class MesAssetVO extends DefultVO{
 	private String kStaffKey				= "";
 	
 	
+	private String viewDetail				= "";
+	
 	
 	
 	
@@ -1558,5 +1560,11 @@ public class MesAssetVO extends DefultVO{
 	}
 	public void seteReplacedByOrg(String eReplacedByOrg) {
 		this.eReplacedByOrg = eReplacedByOrg;
+	}
+	public String getviewDetail() {
+		return viewDetail;
+	}
+	public void setviewDetail(String viewDetail) {
+		this.viewDetail = viewDetail;
 	}
 }

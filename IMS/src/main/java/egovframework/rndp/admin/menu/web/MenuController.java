@@ -1,5 +1,6 @@
 package egovframework.rndp.admin.menu.web;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
@@ -20,6 +21,8 @@ import egovframework.rndp.admin.admin.service.AdminVO;
 import egovframework.rndp.admin.menu.service.MenuBeanVO;
 import egovframework.rndp.admin.menu.service.MenuService;
 import egovframework.rndp.com.utl.MatrixUtil;
+import egovframework.rndp.mes.user.service.MesUserService;
+import egovframework.rndp.mes.user.service.MesUserVO;
 import egovframework.rte.fdl.property.EgovPropertyService;
 
 @Controller
@@ -33,6 +36,9 @@ public class MenuController {
 	
 	@Resource(name = "adminService")
 	private AdminService adminService;
+
+	@Resource(name = "mesUserService")
+	private MesUserService mesUserService;
 	
 	/** EgovPropertyService */
     @Resource(name = "propertiesService")
@@ -137,6 +143,30 @@ public class MenuController {
 		int adminKey = adminService.adminIdKey(menuBeanVO.getAdminStr().split(",")[0]);
 		menuBeanVO.setAdminKey(adminKey);
 		menuService.menuInsert(menuBeanVO);
+		
+		// 메뉴 추가 시 모든 유저에게 보여지도록 권한 부여
+		int max = mesUserService.mesUserMenuAuthMaxCnt();
+		MesUserVO mesUserVO = new MesUserVO();
+		List mesUserList = mesUserService.selectUserffList(mesUserVO);
+		List<MesUserVO> userList = new ArrayList(mesUserList);
+		int totCnt = mesUserService.selectUserCount(mesUserVO);
+		if(totCnt>0) {
+			MesUserVO vo = new MesUserVO();
+			vo.setkMenuAuthFlag("T");
+			vo.setkMenuAuthC("T");			
+			vo.setkMenuAuthM("T");			
+			vo.setkMenuAuthD("T");			
+			vo.setkMenuAuthW("T");			
+			vo.setkMenuKey(String.valueOf(menuBeanVO.getKey()));
+			vo.setkMenuAuthKey(String.valueOf(max));
+			for(MesUserVO list : userList) {
+				vo.setMesUserKey(list.getMesUserKey());
+				mesUserService.mesUserMenuAuthUpdate(vo);
+			}
+		}
+		
+		
+		
 		return "redirect:/admin/menuList.do?groupKey="+menuBeanVO.getGroupKey()+"&rootKey="+menuBeanVO.getRoot()+"&menuKey="+menuBeanVO.getKey();
 	}
 	
