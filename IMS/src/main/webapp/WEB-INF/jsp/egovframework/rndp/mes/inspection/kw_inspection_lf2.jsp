@@ -274,7 +274,7 @@ function excelDwonload(){
 				<li>
 					<span>점검일자</span>
 					<input type="text" id="eTopStartDate" name="eTopStartDate" style="width:100px;text-align: center;" class="inp_color"  value="${mesInspectionVO.eTopStartDate}" readonly />
-		           	~ <input type="text" id="eTopEndDate" name="eTopEndDate" style="width:100px;text-align: center;" class="inp_color"  value="${mesInspectionVO.eTopEndDate}" readonly />
+		           	- <input type="text" id="eTopEndDate" name="eTopEndDate" style="padding-left:2px; width:100px;text-align: center;" class="inp_color"  value="${mesInspectionVO.eTopEndDate}" readonly />
 					
 				</li>
 				<li style="    padding-left: 50px;">

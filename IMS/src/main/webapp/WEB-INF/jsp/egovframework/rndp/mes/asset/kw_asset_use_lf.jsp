@@ -94,7 +94,7 @@ function requestSign(aAssetUseHKey, sSignKey, gubun){
 		    	<li>
 	           		<span>작성일자</span>
 		       		<input type="text" id="topStartDate" name="topStartDate" style="width:100px;" value="${mesAssetVO.topStartDate}" readonly />
-		           	~ <input type="text" id="topEndDate" name="topEndDate" style="width:100px;" value="${mesAssetVO.topEndDate}" readonly />
+		           	- <input type="text" id="topEndDate" name="topEndDate" style="width:100px;" style="padding-left:2px;" value="${mesAssetVO.topEndDate}" readonly />
 				</li>
 				<li>
 					<a onclick="fn_guestList(1);" style="cursor: pointer;">

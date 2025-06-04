@@ -347,7 +347,7 @@ function reCirSet(obj){
 						</td>
 						<th style="width:10%;">*사업기간</th>
 						<td style="width:15%;">
-							<input type="text" class="inp_color" id="oStartDate" name="oStartDate" style="width:40%;" value="" readonly /> ~
+							<input type="text" class="inp_color" id="oStartDate" name="oStartDate" style="width:40%;" value="" readonly /> -
 							<input type="text" class="inp_color" id="oEndDate" name="oEndDate" style="width:40%;" value="" readonly />
 						</td>
 						<!-- <th style="width:10%;">사업비용</th>

@@ -126,7 +126,7 @@ $(document).ready(function(){
 						 <span>요청일자</span>
 						 <div class="date">
 						 	<input type="text" name="eTopStartDate" id="eTopStartDate" value="${mesApprovalVO.eTopStartDate}"  readonly />
-			           	~ <input type="text" name="eTopEndDate" id="eTopEndDate" value="${mesApprovalVO.eTopEndDate}"   readonly />
+			           	- <input type="text" name="eTopEndDate" id="eTopEndDate" style="padding-left:2px;" value="${mesApprovalVO.eTopEndDate}"   readonly />
 						 </div>
 			     	</li>
 				</ul>

@@ -269,7 +269,7 @@ $(document).ready(function(){
 						 <span>요청일자</span>
 						 <div class="date">
 				       		<input type="text" name="topStartDate" id="topStartDate" value="${mesIssueVO.topStartDate}" readonly />
-				           	~ <input type="text" name="topEndDate" id="topEndDate" value="${mesIssueVO.topEndDate}" readonly />
+				           	- <input type="text" name="topEndDate" id="topEndDate" style="padding-left:2px;" value="${mesIssueVO.topEndDate}" readonly />
 				         </div>
 			     	</li>
 	<!-- 		    	<li>	 -->

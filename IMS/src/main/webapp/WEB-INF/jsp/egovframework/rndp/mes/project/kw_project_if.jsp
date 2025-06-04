@@ -286,7 +286,7 @@ function approvalPop(){
 					</td>
 					<th>사업기간</th>
 					<td>
-						<input type="text" class="inp_color" id="eStartDate" name="eStartDate" style="width:100px;text-align: center;" value="" readonly /> ~
+						<input type="text" class="inp_color" id="eStartDate" name="eStartDate" style="width:100px;text-align: center;" value="" readonly /> -
 						<input type="text" class="inp_color" id="eEndDate" name="eEndDate" style="width:100px;text-align: center;" value="" readonly />
 					</td>
 					<th>주사업자</th>

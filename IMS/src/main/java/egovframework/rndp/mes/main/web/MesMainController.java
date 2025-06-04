@@ -246,14 +246,14 @@ public class MesMainController {
 			, ModelMap model)
 			throws Exception {
 		boolean eIdCheck = true;
-		if(staffVo.getkStaffId().equals("dong")  
-				|| staffVo.getkStaffId().equals("rndp") ){
-			eIdCheck =false;
-		}
-		
-		if(eIdCheck){
-			return "mes/main.tiles";
-		}
+//		if(staffVo.getkStaffId().equals("dong")  
+//				|| staffVo.getkStaffId().equals("rndp") ){
+//			eIdCheck =false;
+//		}
+//		
+//		if(eIdCheck){
+//			return "mes/main.tiles";
+//		}
 		
 		
 		Date d = new Date();

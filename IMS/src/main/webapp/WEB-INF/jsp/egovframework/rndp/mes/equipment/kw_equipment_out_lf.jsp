@@ -196,7 +196,7 @@ function eImport_go(eEntryExitItemKey){
 				<li>
 					<span>반출 일자</span>
 					<input type="text" id="eTopStartDate" name="eTopStartDate" style="width:100px; text-align: center;" class="inp_color"  value="${mesEquipmentVO.eTopStartDate}" readonly />
-		           	~ <input type="text" id="eTopEndDate" name="eTopEndDate" style="width:100px; text-align: center;" class="inp_color"  value="${mesEquipmentVO.eTopEndDate}" readonly />
+		           	- <input type="text" id="eTopEndDate" name="eTopEndDate" style="padding-left:2px; width:100px; text-align: center;" class="inp_color"  value="${mesEquipmentVO.eTopEndDate}" readonly />
 					
 				</li>
 				<li style="    padding-left: 50px;">

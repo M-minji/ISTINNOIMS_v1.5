@@ -100,7 +100,7 @@ function fn_search_detail(){
 							<span>반출 일자</span>
 							<div class="date">
 								<input type="text" id="topStartDate" name="topStartDate" class="inp_color"  value="${mesAssetVO.topStartDate}" readonly />
-					           	~ <input type="text" id="topEndDate" name="topEndDate" class="inp_color"  value="${mesAssetVO.topEndDate}" readonly />
+					           	- <input type="text" id="topEndDate" name="topEndDate" style="padding-left:2px;" class="inp_color"  value="${mesAssetVO.topEndDate}" readonly />
 					        </div>
 						</li>
 					</ul>

@@ -745,8 +745,8 @@
 						</td>
 						</c:if>
 						<c:if test="${issueInfo.eIssueStatus eq '처리등록'}">
-							<td colspan="4" >${issueInfo.eActualDetails}
-								<textarea id="eActualDetails" name="eActualDetails"  style="font-size: 20px; width: 100%; position: absolute; height: 0; overflow:hidden; visibility: hidden;">${issueInfo.eActualDetails}</textarea>
+							<td colspan="4" style="text-align: left; padding: 4px 16px;"> ${issueInfo.eActualDetails}
+								<textarea id="eActualDetails" name="eActualDetails"  style="text-align: center; font-size: 20px; width: 100%; position: absolute; height: 0; overflow:hidden; visibility: hidden;">${issueInfo.eActualDetails}</textarea>
 							</td>
 						</c:if>
 					</tr>
