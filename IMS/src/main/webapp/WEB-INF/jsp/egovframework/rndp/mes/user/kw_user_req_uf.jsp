@@ -108,7 +108,7 @@ function mesUserResInsert(key){
 									style="ime-mode: disabled; width:15% !important;" value="${mesUserInfo.mesUserTelephone3}" readonly="readonly" /></td>
 						</tr>
 						<tr>
-							<th scope="row">핸 드 폰</th>
+							<th scope="row">휴대전화</th>
 							<td colspan="3">
 							${mesUserInfo.mesUserMobile1}-${mesUserInfo.mesUserMobile2}-${mesUserInfo.mesUserMobile3}
 							
