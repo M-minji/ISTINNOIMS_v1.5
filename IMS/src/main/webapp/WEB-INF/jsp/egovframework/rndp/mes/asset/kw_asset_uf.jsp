@@ -167,7 +167,7 @@
 		
 	}
 	
-	
+	let checkOption = false;
 	function getCateData(depth){   
 		$.ajax({
 				type		: "post"
@@ -185,6 +185,24 @@
 				    if(selectElement.options[i].value !== "0") {
 				        selectElement.remove(i);
 				    }
+				}
+				
+				if(depth > 1){
+					checkOption = true;
+				}
+				if(checkOption) {
+					var element2 = document.getElementById("maintanceSelect"+(depth-1));
+					if(element2.value == "0"){
+						getCateData(depth-1);
+					}
+					for(var i = depth+1; i<5; i++){
+						var element = document.getElementById("maintanceSelect"+i);
+						for(var j = element.options.length - 1; j >= 0; j--) {
+							if(element.options[j].value !== "0") {
+								element.remove(j);
+						    }
+						}
+					}
 				}
 			
 				var innerStr = "";

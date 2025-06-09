@@ -280,7 +280,7 @@
 	    
 	}
 	
-
+	let checkOption = false;
 	function getCateData(depth){
 			$.ajax({
 					type		: "post"
@@ -291,14 +291,33 @@
 					}
 				,	success		: function(msg){
 					var selectElement = document.getElementById("maintanceSelect"+depth);
-	
+					
 					// option 요소들을 반복하여 검사하고 value가 0이 아닌 것들을 제거
 					for(var i = selectElement.options.length - 1; i >= 0; i--) {
 					    if(selectElement.options[i].value !== "0") {
 					        selectElement.remove(i);
 					    }
 					}
-				
+					
+					if(depth > 1){
+						checkOption = true;
+					}
+					if(checkOption) {
+						var element2 = document.getElementById("maintanceSelect"+(depth-1));
+						if(element2.value == "0"){
+							getCateData(depth-1);
+						}
+						for(var i = depth+1; i<5; i++){
+							var element = document.getElementById("maintanceSelect"+i);
+							for(var j = element.options.length - 1; j >= 0; j--) {
+								if(element.options[j].value !== "0") {
+									element.remove(j);
+							    }
+							}
+						}
+					}
+					
+					
 					var innerStr = "";
 					var list = msg.result.dataList;
 					for(var i=0; i<list.length; i++){

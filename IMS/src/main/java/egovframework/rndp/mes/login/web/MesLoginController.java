@@ -125,7 +125,7 @@ public class MesLoginController {
     			tmpVO = (EnvVO)envList.get(i);
     			envMap.put(tmpVO.getName(), tmpVO.getValue());
     			if(tmpVO.getName().equals("mainLogImgName"))	mainLogo = tmpVO.getValue();
-    		}		
+    		}
     		model.addAttribute("mainLogo", mainLogo); 
     		
     		String id = MesK_StaffVo.getkStaffId();
@@ -157,7 +157,7 @@ public class MesLoginController {
     					
     					//항상 생산관리이므로 fix
     					request.getSession().setAttribute("groupKey",1); 
-    					 
+    					
     					UserInfoVO user = (UserInfoVO) request.getSession().getAttribute("user");
     					LOGGER.debug("user = "+user); 
     					
@@ -227,17 +227,17 @@ public class MesLoginController {
 		session1.removeAttribute("root");
 		
 		//기업정보		
-				List envList = envService.envList();
-				HashMap<String, String> envMap = new HashMap<String, String>();
-				EnvVO tmpVO = new EnvVO();
-				String mainLogo = "";
-				for(int i = 0; i< envList.size(); i++){
-					tmpVO = (EnvVO)envList.get(i);
-					envMap.put(tmpVO.getName(), tmpVO.getValue());
-					if(tmpVO.getName().equals("mainLogImgName"))	mainLogo = tmpVO.getValue();
-				}
-				
-				model.addAttribute("mainLogo", mainLogo);
+		List envList = envService.envList();
+		HashMap<String, String> envMap = new HashMap<String, String>();
+		EnvVO tmpVO = new EnvVO();
+		String mainLogo = "";
+		for(int i = 0; i< envList.size(); i++){
+			tmpVO = (EnvVO)envList.get(i);
+			envMap.put(tmpVO.getName(), tmpVO.getValue());
+			if(tmpVO.getName().equals("mainLogImgName"))	mainLogo = tmpVO.getValue();
+		}
+		
+		model.addAttribute("mainLogo", mainLogo);
 				
 		return "mes/login/loginfrm.tiles";
 	}

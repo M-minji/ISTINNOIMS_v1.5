@@ -114,6 +114,10 @@ public class MesMyPageController {
 			, ModelMap model
 			, HttpServletResponse response) throws Exception{
 		
+		MesK_StaffVo staffVo = (MesK_StaffVo) request.getSession().getAttribute("mesStaff");
+		model.addAttribute("staffVo", staffVo);
+		mesMyPageVO.setkStaffKey(mesMyPageVO.getkStaffKey());
+		
 		MesMyPageVO vo = mesMyPageService.selectMyPageInfo(mesMyPageVO);
 		model.addAttribute("vo", vo);
 		
@@ -127,8 +131,14 @@ public class MesMyPageController {
 			, ModelMap model
 			, HttpServletResponse response) throws Exception{
 		
-		mesMyPageService.updateMyPageInfo(mesMyPageVO);
+		MesK_StaffVo staffVo = (MesK_StaffVo) request.getSession().getAttribute("mesStaff");
+		model.addAttribute("staffVo", staffVo);
+		mesMyPageVO.setkStaffKey(mesMyPageVO.getkStaffKey());
 		
-		return "mes/main.tiles";
+		mesMyPageService.updateMyPageInfo(mesMyPageVO);
+		System.out.println("== 회원정보 저장 완료. main.do로 리디렉트 시도 ==");
+		response.sendRedirect(request.getContextPath() + "/mes/main.do");
+		return null;
+
 	}
 }
